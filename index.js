@@ -10,7 +10,7 @@ var handleBeaconDiscovery = function(beacon){
 
   if(user){
     console.log('...last talked to', user.name,
-      (now - Math.round(user.lastConnected)/1000), 'seconds ago');
+      (Math.round((now - user.lastConnected)/1000)), 'seconds ago');
 
     if(now - user.lastConnected > thirtySeconds)
       playSong(user.clip);
