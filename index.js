@@ -1,16 +1,21 @@
 var Bleacon = require('bleacon');
 var Player = require('player');
 var users = require('./users');
+var thirtySeconds = 30000;
 
 
 var handleBeaconDiscovery = function(beacon){
+  var now = new Date().getTime();
   var user = findUserViaBeacon(beacon);
 
   if(user){
-    if(beacon.proximity == 'near' && user.lastState != 'near')
+    console.log('...last talked to', user.name,
+      (now - Math.round(user.lastConnected)/1000), 'seconds ago');
+
+    if(now - user.lastConnected > thirtySeconds)
       playSong(user.clip);
 
-    user.lastState = beacon.proximity;
+    user.lastConnected = now;
   }
 };
 
@@ -34,9 +39,18 @@ var playSong = function(clipName) {
 
   player.play(function(err, player){
     if(err) console.log(err);
-    else console.log('played', clipName);
+    else {
+      console.log('--------------------');
+      console.log('PLAYED SONG: ', clipName);
+      console.log('--------------------');
+    }
   });
 };
+
+
+users.forEach(function(user){
+  user.lastConnected = new Date().getTime();
+});
 
 
 Bleacon.startScanning();
