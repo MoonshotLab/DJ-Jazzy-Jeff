@@ -938,3 +938,262 @@ https://developer.apple.com/icloud/documentation/data-storage/
 2014-10-31 13:08:29.718 DJ-Jazzy-Jeff[21525:3994399] Converted locationManager:didChangeAuthorizationStatus: into didChangeAuthorizationStatus
 2014-10-31 13:08:29.718 DJ-Jazzy-Jeff[21525:3994422] [DOM] DEFAULT didChangeAuthorizationStatus()
 2014-10-31 13:08:29.718 DJ-Jazzy-Jeff[21525:3994424] [DOM] _onDelegateCallback() {"eventType":"didChangeAuthorizationStatus","status":"AuthorizationStatusAuthorized"}
+2014-10-31 13:41:41.327 DJ-Jazzy-Jeff[22552:4041320] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/jlongstr/Library/Developer/CoreSimulator/Devices/5BAE2F93-1C00-4BD6-A7A1-628CCC0C9369/data/Containers/Data/Application/C6FF6610-D273-43A2-B4B3-653E355BE0F2/Library/Cookies/Cookies.binarycookies
+2014-10-31 13:41:41.416 DJ-Jazzy-Jeff[22552:4041320] Apache Cordova native platform version 3.6.3 is starting.
+2014-10-31 13:41:41.416 DJ-Jazzy-Jeff[22552:4041320] Multi-tasking -> Device: YES, App: YES
+2014-10-31 13:41:41.421 DJ-Jazzy-Jeff[22552:4041320] Unlimited access to network resources
+2014-10-31 13:41:41.424 DJ-Jazzy-Jeff[22552:4041320] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+
+2014-10-31 13:41:41.692 DJ-Jazzy-Jeff[22552:4041320] Resetting plugins due to page load.
+2014-10-31 13:41:41.732 DJ-Jazzy-Jeff[22552:4041320] Finished load of: file:///Users/jlongstr/Library/Developer/CoreSimulator/Devices/5BAE2F93-1C00-4BD6-A7A1-628CCC0C9369/data/Containers/Bundle/Application/7908CA27-DB84-408A-90EB-1E0CF9D57607/DJ-Jazzy-Jeff.app/www/index.html
+2014-10-31 13:41:41.776 DJ-Jazzy-Jeff[22552:4041357] [DOM] registerDelegateCallbackId()
+2014-10-31 13:41:41.777 DJ-Jazzy-Jeff[22552:4041320] peripheralManagerDidUpdateState() state: PeripheralManagerStateUnsupported
+2014-10-31 13:41:41.777 DJ-Jazzy-Jeff[22552:4041359] peripheralManagerDidUpdateState: PeripheralManagerStateUnsupported
+2014-10-31 13:41:41.777 DJ-Jazzy-Jeff[22552:4041359] Converted peripheralManagerDidUpdateState: into peripheralManagerDidUpdateState
+2014-10-31 13:41:41.777 DJ-Jazzy-Jeff[22552:4041359] Invalid callback id received by sendPluginResult
+2014-10-31 13:41:41.778 DJ-Jazzy-Jeff[22552:4041359] Registering delegate callback ID: LocationManager66404745
+2014-10-31 13:41:41.781 DJ-Jazzy-Jeff[22552:4041320] didChangeAuthorizationStatus
+2014-10-31 13:41:41.781 DJ-Jazzy-Jeff[22552:4041320] didChangeAuthorizationStatus: 3 => AuthorizationStatusAuthorized
+2014-10-31 13:41:41.781 DJ-Jazzy-Jeff[22552:4041320] Converted locationManager:didChangeAuthorizationStatus: into didChangeAuthorizationStatus
+2014-10-31 13:41:41.782 DJ-Jazzy-Jeff[22552:4041359] [DOM] _onDelegateCallback() {"eventType":"didChangeAuthorizationStatus","status":"AuthorizationStatusAuthorized"}
+2014-10-31 13:41:41.782 DJ-Jazzy-Jeff[22552:4041357] [DOM] _onDelegateCallback() null
+2014-10-31 13:41:41.782 DJ-Jazzy-Jeff[22552:4041360] [DOM] DEFAULT didChangeAuthorizationStatus()
+2014-10-31 13:41:41.785 DJ-Jazzy-Jeff[22552:4041357] [Default measuredPower will be used.
+2014-10-31 13:41:41.785 DJ-Jazzy-Jeff[22552:4041357] Advertising is accepted, but won't start until peripheral manager is powered on.
+2014-10-31 13:42:30.667 DJ-Jazzy-Jeff[22552:4041320] CDVWebViewDelegate: Navigation started when state=1
+2014-10-31 13:42:30.668 DJ-Jazzy-Jeff[22552:4041320] Failed to load webpage with error: CDVWebViewDelegate: Navigation started when state=1
+2014-10-31 13:42:30.668 DJ-Jazzy-Jeff[22552:4041320] Failed to load webpage with error: The URL can’t be shown
+2014-10-31 13:42:31.712 DJ-Jazzy-Jeff[22552:4041320] CDVWebViewDelegate: Navigation started when state=1
+2014-10-31 13:42:31.712 DJ-Jazzy-Jeff[22552:4041320] Failed to load webpage with error: CDVWebViewDelegate: Navigation started when state=1
+2014-10-31 13:42:31.712 DJ-Jazzy-Jeff[22552:4041320] Failed to load webpage with error: The URL can’t be shown
+2014-10-31 13:42:32.688 DJ-Jazzy-Jeff[22552:4041320] CDVWebViewDelegate: Navigation started when state=1
+2014-10-31 13:42:32.688 DJ-Jazzy-Jeff[22552:4041320] Failed to load webpage with error: CDVWebViewDelegate: Navigation started when state=1
+2014-10-31 13:42:32.688 DJ-Jazzy-Jeff[22552:4041320] Failed to load webpage with error: The URL can’t be shown
+2014-10-31 13:59:35.642 DJ-Jazzy-Jeff[23119:4062377] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/jlongstr/Library/Developer/CoreSimulator/Devices/5BAE2F93-1C00-4BD6-A7A1-628CCC0C9369/data/Containers/Data/Application/EC9F232C-BC8D-4ACF-810D-373437BF78EB/Library/Cookies/Cookies.binarycookies
+2014-10-31 13:59:35.720 DJ-Jazzy-Jeff[23119:4062377] Apache Cordova native platform version 3.6.3 is starting.
+2014-10-31 13:59:35.721 DJ-Jazzy-Jeff[23119:4062377] Multi-tasking -> Device: YES, App: YES
+2014-10-31 13:59:35.725 DJ-Jazzy-Jeff[23119:4062377] Unlimited access to network resources
+2014-10-31 13:59:35.728 DJ-Jazzy-Jeff[23119:4062377] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+
+2014-10-31 13:59:36.071 DJ-Jazzy-Jeff[23119:4062377] Resetting plugins due to page load.
+2014-10-31 13:59:36.152 DJ-Jazzy-Jeff[23119:4062377] Finished load of: file:///Users/jlongstr/Library/Developer/CoreSimulator/Devices/5BAE2F93-1C00-4BD6-A7A1-628CCC0C9369/data/Containers/Bundle/Application/A9A5AEAF-5A6B-475D-8480-F8DB2545B8FF/DJ-Jazzy-Jeff.app/www/index.html
+2014-10-31 13:59:36.188 DJ-Jazzy-Jeff[23119:4062413] [DOM] registerDelegateCallbackId()
+2014-10-31 13:59:36.188 DJ-Jazzy-Jeff[23119:4062412] Registering delegate callback ID: LocationManager1355295493
+2014-10-31 13:59:36.191 DJ-Jazzy-Jeff[23119:4062377] peripheralManagerDidUpdateState() state: PeripheralManagerStateUnsupported
+2014-10-31 13:59:36.191 DJ-Jazzy-Jeff[23119:4062412] peripheralManagerDidUpdateState: PeripheralManagerStateUnsupported
+2014-10-31 13:59:36.191 DJ-Jazzy-Jeff[23119:4062377] didChangeAuthorizationStatus
+2014-10-31 13:59:36.191 DJ-Jazzy-Jeff[23119:4062412] Converted peripheralManagerDidUpdateState: into peripheralManagerDidUpdateState
+2014-10-31 13:59:36.191 DJ-Jazzy-Jeff[23119:4062377] didChangeAuthorizationStatus: 3 => AuthorizationStatusAuthorized
+2014-10-31 13:59:36.191 DJ-Jazzy-Jeff[23119:4062377] Converted locationManager:didChangeAuthorizationStatus: into didChangeAuthorizationStatus
+2014-10-31 13:59:36.192 DJ-Jazzy-Jeff[23119:4062414] [DOM] _onDelegateCallback() null
+2014-10-31 13:59:36.192 DJ-Jazzy-Jeff[23119:4062412] [DOM] _onDelegateCallback() {"eventType":"peripheralManagerDidUpdateState","state":"PeripheralManagerStateUnsupported"}
+2014-10-31 13:59:36.192 DJ-Jazzy-Jeff[23119:4062413] [DOM] DEFAULT peripheralManagerDidUpdateState()
+2014-10-31 13:59:36.193 DJ-Jazzy-Jeff[23119:4062411] [DOM] DEFAULT didChangeAuthorizationStatus()
+2014-10-31 13:59:36.193 DJ-Jazzy-Jeff[23119:4062414] [DOM] _onDelegateCallback() {"eventType":"didChangeAuthorizationStatus","status":"AuthorizationStatusAuthorized"}
+2014-10-31 13:59:36.194 DJ-Jazzy-Jeff[23119:4062414] [Default measuredPower will be used.
+2014-10-31 13:59:36.195 DJ-Jazzy-Jeff[23119:4062414] Advertising is accepted, but won't start until peripheral manager is powered on.
+2014-10-31 14:06:01.183 DJ-Jazzy-Jeff[23385:4069681] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/jlongstr/Library/Developer/CoreSimulator/Devices/5BAE2F93-1C00-4BD6-A7A1-628CCC0C9369/data/Containers/Data/Application/D624902A-87F5-4907-A13B-2983964262E0/Library/Cookies/Cookies.binarycookies
+2014-10-31 14:06:01.263 DJ-Jazzy-Jeff[23385:4069681] Apache Cordova native platform version 3.6.3 is starting.
+2014-10-31 14:06:01.264 DJ-Jazzy-Jeff[23385:4069681] Multi-tasking -> Device: YES, App: YES
+2014-10-31 14:06:01.269 DJ-Jazzy-Jeff[23385:4069681] Unlimited access to network resources
+2014-10-31 14:06:01.272 DJ-Jazzy-Jeff[23385:4069681] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+
+2014-10-31 14:06:01.554 DJ-Jazzy-Jeff[23385:4069681] Resetting plugins due to page load.
+2014-10-31 14:06:01.611 DJ-Jazzy-Jeff[23385:4069681] Finished load of: file:///Users/jlongstr/Library/Developer/CoreSimulator/Devices/5BAE2F93-1C00-4BD6-A7A1-628CCC0C9369/data/Containers/Bundle/Application/B324BD5C-DED1-422E-B5FE-0F0A304DE9C6/DJ-Jazzy-Jeff.app/www/index.html
+2014-10-31 14:06:01.647 DJ-Jazzy-Jeff[23385:4069704] [DOM] registerDelegateCallbackId()
+2014-10-31 14:06:01.647 DJ-Jazzy-Jeff[23385:4069700] Registering delegate callback ID: LocationManager1376252984
+2014-10-31 14:06:01.649 DJ-Jazzy-Jeff[23385:4069699] peripheralManagerDidUpdateState: PeripheralManagerStateUnsupported
+2014-10-31 14:06:01.649 DJ-Jazzy-Jeff[23385:4069681] peripheralManagerDidUpdateState() state: PeripheralManagerStateUnsupported
+2014-10-31 14:06:01.650 DJ-Jazzy-Jeff[23385:4069699] Converted peripheralManagerDidUpdateState: into peripheralManagerDidUpdateState
+2014-10-31 14:06:01.651 DJ-Jazzy-Jeff[23385:4069699] [DOM] _onDelegateCallback() null
+2014-10-31 14:06:01.651 DJ-Jazzy-Jeff[23385:4069700] [DOM] _onDelegateCallback() {"eventType":"peripheralManagerDidUpdateState","state":"PeripheralManagerStateUnsupported"}
+2014-10-31 14:06:01.651 DJ-Jazzy-Jeff[23385:4069704] [DOM] DEFAULT peripheralManagerDidUpdateState()
+2014-10-31 14:06:01.654 DJ-Jazzy-Jeff[23385:4069700] [Default measuredPower will be used.
+2014-10-31 14:06:01.655 DJ-Jazzy-Jeff[23385:4069700] Advertising is accepted, but won't start until peripheral manager is powered on.
+2014-10-31 14:06:01.659 DJ-Jazzy-Jeff[23385:4069681] didChangeAuthorizationStatus
+2014-10-31 14:06:01.659 DJ-Jazzy-Jeff[23385:4069681] didChangeAuthorizationStatus: 3 => AuthorizationStatusAuthorized
+2014-10-31 14:06:01.660 DJ-Jazzy-Jeff[23385:4069681] Converted locationManager:didChangeAuthorizationStatus: into didChangeAuthorizationStatus
+2014-10-31 14:06:01.661 DJ-Jazzy-Jeff[23385:4069700] [DOM] _onDelegateCallback() {"eventType":"didChangeAuthorizationStatus","status":"AuthorizationStatusAuthorized"}
+2014-10-31 14:06:01.661 DJ-Jazzy-Jeff[23385:4069704] [DOM] DEFAULT didChangeAuthorizationStatus()
+2014-10-31 14:07:26.155 DJ-Jazzy-Jeff[23569:4072855] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/jlongstr/Library/Developer/CoreSimulator/Devices/5BAE2F93-1C00-4BD6-A7A1-628CCC0C9369/data/Containers/Data/Application/A5FBBA5F-77E8-49CE-BF80-FEB93CC5576D/Library/Cookies/Cookies.binarycookies
+2014-10-31 14:07:26.234 DJ-Jazzy-Jeff[23569:4072855] Apache Cordova native platform version 3.6.3 is starting.
+2014-10-31 14:07:26.235 DJ-Jazzy-Jeff[23569:4072855] Multi-tasking -> Device: YES, App: YES
+2014-10-31 14:07:26.239 DJ-Jazzy-Jeff[23569:4072855] Unlimited access to network resources
+2014-10-31 14:07:26.241 DJ-Jazzy-Jeff[23569:4072855] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+
+2014-10-31 14:07:26.512 DJ-Jazzy-Jeff[23569:4072855] Resetting plugins due to page load.
+2014-10-31 14:07:26.555 DJ-Jazzy-Jeff[23569:4072855] Finished load of: file:///Users/jlongstr/Library/Developer/CoreSimulator/Devices/5BAE2F93-1C00-4BD6-A7A1-628CCC0C9369/data/Containers/Bundle/Application/E83967C2-817F-41AF-AC00-46AD68007FC6/DJ-Jazzy-Jeff.app/www/index.html
+2014-10-31 14:07:26.602 DJ-Jazzy-Jeff[23569:4072876] [DOM] registerDelegateCallbackId()
+2014-10-31 14:07:26.602 DJ-Jazzy-Jeff[23569:4072875] Registering delegate callback ID: LocationManager915387248
+2014-10-31 14:07:26.604 DJ-Jazzy-Jeff[23569:4072855] peripheralManagerDidUpdateState() state: PeripheralManagerStateUnsupported
+2014-10-31 14:07:26.604 DJ-Jazzy-Jeff[23569:4072873] peripheralManagerDidUpdateState: PeripheralManagerStateUnsupported
+2014-10-31 14:07:26.605 DJ-Jazzy-Jeff[23569:4072873] Converted peripheralManagerDidUpdateState: into peripheralManagerDidUpdateState
+2014-10-31 14:07:26.606 DJ-Jazzy-Jeff[23569:4072873] [DOM] _onDelegateCallback() null
+2014-10-31 14:07:26.606 DJ-Jazzy-Jeff[23569:4072875] [DOM] _onDelegateCallback() {"eventType":"peripheralManagerDidUpdateState","state":"PeripheralManagerStateUnsupported"}
+2014-10-31 14:07:26.606 DJ-Jazzy-Jeff[23569:4072876] [DOM] DEFAULT peripheralManagerDidUpdateState()
+2014-10-31 14:07:26.609 DJ-Jazzy-Jeff[23569:4072876] [Default measuredPower will be used.
+2014-10-31 14:07:26.609 DJ-Jazzy-Jeff[23569:4072876] Advertising is accepted, but won't start until peripheral manager is powered on.
+2014-10-31 14:07:26.609 DJ-Jazzy-Jeff[23569:4072855] didChangeAuthorizationStatus
+2014-10-31 14:07:26.610 DJ-Jazzy-Jeff[23569:4072855] didChangeAuthorizationStatus: 3 => AuthorizationStatusAuthorized
+2014-10-31 14:07:26.610 DJ-Jazzy-Jeff[23569:4072855] Converted locationManager:didChangeAuthorizationStatus: into didChangeAuthorizationStatus
+2014-10-31 14:07:26.610 DJ-Jazzy-Jeff[23569:4072875] [DOM] _onDelegateCallback() {"eventType":"didChangeAuthorizationStatus","status":"AuthorizationStatusAuthorized"}
+2014-10-31 14:07:26.610 DJ-Jazzy-Jeff[23569:4072876] [DOM] DEFAULT didChangeAuthorizationStatus()
+2014-10-31 14:08:09.015 DJ-Jazzy-Jeff[23710:4074548] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/jlongstr/Library/Developer/CoreSimulator/Devices/5BAE2F93-1C00-4BD6-A7A1-628CCC0C9369/data/Containers/Data/Application/8000AB25-970B-42FF-8C4D-E888A4CF32C4/Library/Cookies/Cookies.binarycookies
+2014-10-31 14:08:09.099 DJ-Jazzy-Jeff[23710:4074548] Apache Cordova native platform version 3.6.3 is starting.
+2014-10-31 14:08:09.100 DJ-Jazzy-Jeff[23710:4074548] Multi-tasking -> Device: YES, App: YES
+2014-10-31 14:08:09.104 DJ-Jazzy-Jeff[23710:4074548] Unlimited access to network resources
+2014-10-31 14:08:09.107 DJ-Jazzy-Jeff[23710:4074548] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+
+2014-10-31 14:08:09.381 DJ-Jazzy-Jeff[23710:4074548] Resetting plugins due to page load.
+2014-10-31 14:08:09.433 DJ-Jazzy-Jeff[23710:4074548] Finished load of: file:///Users/jlongstr/Library/Developer/CoreSimulator/Devices/5BAE2F93-1C00-4BD6-A7A1-628CCC0C9369/data/Containers/Bundle/Application/E3708559-FEE8-42D5-AF44-1C41392F5E39/DJ-Jazzy-Jeff.app/www/index.html
+2014-10-31 14:08:09.471 DJ-Jazzy-Jeff[23710:4074572] [DOM] registerDelegateCallbackId()
+2014-10-31 14:08:09.471 DJ-Jazzy-Jeff[23710:4074567] Registering delegate callback ID: LocationManager1825960560
+2014-10-31 14:08:09.474 DJ-Jazzy-Jeff[23710:4074548] peripheralManagerDidUpdateState() state: PeripheralManagerStateUnsupported
+2014-10-31 14:08:09.474 DJ-Jazzy-Jeff[23710:4074569] peripheralManagerDidUpdateState: PeripheralManagerStateUnsupported
+2014-10-31 14:08:09.474 DJ-Jazzy-Jeff[23710:4074569] Converted peripheralManagerDidUpdateState: into peripheralManagerDidUpdateState
+2014-10-31 14:08:09.475 DJ-Jazzy-Jeff[23710:4074569] [DOM] _onDelegateCallback() null
+2014-10-31 14:08:09.475 DJ-Jazzy-Jeff[23710:4074569] [DOM] _onDelegateCallback() {"eventType":"peripheralManagerDidUpdateState","state":"PeripheralManagerStateUnsupported"}
+2014-10-31 14:08:09.475 DJ-Jazzy-Jeff[23710:4074572] [DOM] DEFAULT peripheralManagerDidUpdateState()
+2014-10-31 14:08:09.524 DJ-Jazzy-Jeff[23710:4074548] didChangeAuthorizationStatus
+2014-10-31 14:08:09.524 DJ-Jazzy-Jeff[23710:4074548] didChangeAuthorizationStatus: 3 => AuthorizationStatusAuthorized
+2014-10-31 14:08:09.524 DJ-Jazzy-Jeff[23710:4074548] Converted locationManager:didChangeAuthorizationStatus: into didChangeAuthorizationStatus
+2014-10-31 14:08:09.525 DJ-Jazzy-Jeff[23710:4074569] [DOM] DEFAULT didChangeAuthorizationStatus()
+2014-10-31 14:08:09.525 DJ-Jazzy-Jeff[23710:4074572] [DOM] _onDelegateCallback() {"eventType":"didChangeAuthorizationStatus","status":"AuthorizationStatusAuthorized"}
+2014-10-31 14:08:16.760 DJ-Jazzy-Jeff[23710:4074895] [Default measuredPower will be used.
+2014-10-31 14:08:16.760 DJ-Jazzy-Jeff[23710:4074895] Advertising is accepted, but won't start until peripheral manager is powered on.
+2014-10-31 14:09:04.017 DJ-Jazzy-Jeff[23903:4077377] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/jlongstr/Library/Developer/CoreSimulator/Devices/5BAE2F93-1C00-4BD6-A7A1-628CCC0C9369/data/Containers/Data/Application/B4CCE24C-1FB9-442F-B058-E7BFEEF2EDF7/Library/Cookies/Cookies.binarycookies
+2014-10-31 14:09:04.096 DJ-Jazzy-Jeff[23903:4077377] Apache Cordova native platform version 3.6.3 is starting.
+2014-10-31 14:09:04.097 DJ-Jazzy-Jeff[23903:4077377] Multi-tasking -> Device: YES, App: YES
+2014-10-31 14:09:04.101 DJ-Jazzy-Jeff[23903:4077377] Unlimited access to network resources
+2014-10-31 14:09:04.103 DJ-Jazzy-Jeff[23903:4077377] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+
+2014-10-31 14:09:04.383 DJ-Jazzy-Jeff[23903:4077377] Resetting plugins due to page load.
+2014-10-31 14:09:04.432 DJ-Jazzy-Jeff[23903:4077377] Finished load of: file:///Users/jlongstr/Library/Developer/CoreSimulator/Devices/5BAE2F93-1C00-4BD6-A7A1-628CCC0C9369/data/Containers/Bundle/Application/82F3FFD5-F84F-4108-A18F-83E275D7D113/DJ-Jazzy-Jeff.app/www/index.html
+2014-10-31 14:09:04.469 DJ-Jazzy-Jeff[23903:4077396] [DOM] registerDelegateCallbackId()
+2014-10-31 14:09:04.469 DJ-Jazzy-Jeff[23903:4077395] Registering delegate callback ID: LocationManager1951604240
+2014-10-31 14:09:04.471 DJ-Jazzy-Jeff[23903:4077377] peripheralManagerDidUpdateState() state: PeripheralManagerStateUnsupported
+2014-10-31 14:09:04.471 DJ-Jazzy-Jeff[23903:4077393] peripheralManagerDidUpdateState: PeripheralManagerStateUnsupported
+2014-10-31 14:09:04.472 DJ-Jazzy-Jeff[23903:4077393] Converted peripheralManagerDidUpdateState: into peripheralManagerDidUpdateState
+2014-10-31 14:09:04.472 DJ-Jazzy-Jeff[23903:4077393] [DOM] _onDelegateCallback() null
+2014-10-31 14:09:04.472 DJ-Jazzy-Jeff[23903:4077393] [DOM] _onDelegateCallback() {"eventType":"peripheralManagerDidUpdateState","state":"PeripheralManagerStateUnsupported"}
+2014-10-31 14:09:04.473 DJ-Jazzy-Jeff[23903:4077396] [DOM] DEFAULT peripheralManagerDidUpdateState()
+2014-10-31 14:09:04.476 DJ-Jazzy-Jeff[23903:4077377] didChangeAuthorizationStatus
+2014-10-31 14:09:04.477 DJ-Jazzy-Jeff[23903:4077377] didChangeAuthorizationStatus: 3 => AuthorizationStatusAuthorized
+2014-10-31 14:09:04.477 DJ-Jazzy-Jeff[23903:4077377] Converted locationManager:didChangeAuthorizationStatus: into didChangeAuthorizationStatus
+2014-10-31 14:09:04.477 DJ-Jazzy-Jeff[23903:4077395] [DOM] DEFAULT didChangeAuthorizationStatus()
+2014-10-31 14:09:04.477 DJ-Jazzy-Jeff[23903:4077396] [DOM] _onDelegateCallback() {"eventType":"didChangeAuthorizationStatus","status":"AuthorizationStatusAuthorized"}
+2014-10-31 14:09:07.525 DJ-Jazzy-Jeff[23903:4077395] [Default measuredPower will be used.
+2014-10-31 14:09:07.525 DJ-Jazzy-Jeff[23903:4077395] Advertising is accepted, but won't start until peripheral manager is powered on.
+2014-10-31 14:10:49.118 DJ-Jazzy-Jeff[24047:4079513] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/jlongstr/Library/Developer/CoreSimulator/Devices/5BAE2F93-1C00-4BD6-A7A1-628CCC0C9369/data/Containers/Data/Application/E4061B5E-340D-4241-AF26-C6F7CD176783/Library/Cookies/Cookies.binarycookies
+2014-10-31 14:10:49.191 DJ-Jazzy-Jeff[24047:4079513] Apache Cordova native platform version 3.6.3 is starting.
+2014-10-31 14:10:49.191 DJ-Jazzy-Jeff[24047:4079513] Multi-tasking -> Device: YES, App: YES
+2014-10-31 14:10:49.196 DJ-Jazzy-Jeff[24047:4079513] Unlimited access to network resources
+2014-10-31 14:10:49.198 DJ-Jazzy-Jeff[24047:4079513] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+
+2014-10-31 14:10:49.459 DJ-Jazzy-Jeff[24047:4079513] Resetting plugins due to page load.
+2014-10-31 14:10:49.501 DJ-Jazzy-Jeff[24047:4079513] Finished load of: file:///Users/jlongstr/Library/Developer/CoreSimulator/Devices/5BAE2F93-1C00-4BD6-A7A1-628CCC0C9369/data/Containers/Bundle/Application/E10A505D-1F4A-4FFB-95E1-8A9EEDD0BFD2/DJ-Jazzy-Jeff.app/www/index.html
+2014-10-31 14:10:49.538 DJ-Jazzy-Jeff[24047:4079532] [DOM] registerDelegateCallbackId()
+2014-10-31 14:10:49.539 DJ-Jazzy-Jeff[24047:4079513] peripheralManagerDidUpdateState() state: PeripheralManagerStateUnsupported
+2014-10-31 14:10:49.539 DJ-Jazzy-Jeff[24047:4079531] peripheralManagerDidUpdateState: PeripheralManagerStateUnsupported
+2014-10-31 14:10:49.539 DJ-Jazzy-Jeff[24047:4079531] Converted peripheralManagerDidUpdateState: into peripheralManagerDidUpdateState
+2014-10-31 14:10:49.539 DJ-Jazzy-Jeff[24047:4079531] Invalid callback id received by sendPluginResult
+2014-10-31 14:10:49.541 DJ-Jazzy-Jeff[24047:4079531] Registering delegate callback ID: LocationManager147802626
+2014-10-31 14:10:49.546 DJ-Jazzy-Jeff[24047:4079513] didChangeAuthorizationStatus
+2014-10-31 14:10:49.546 DJ-Jazzy-Jeff[24047:4079513] didChangeAuthorizationStatus: 3 => AuthorizationStatusAuthorized
+2014-10-31 14:10:49.546 DJ-Jazzy-Jeff[24047:4079513] Converted locationManager:didChangeAuthorizationStatus: into didChangeAuthorizationStatus
+2014-10-31 14:10:49.546 DJ-Jazzy-Jeff[24047:4079531] [DOM] _onDelegateCallback() null
+2014-10-31 14:10:49.547 DJ-Jazzy-Jeff[24047:4079533] [DOM] DEFAULT didChangeAuthorizationStatus()
+2014-10-31 14:10:49.547 DJ-Jazzy-Jeff[24047:4079534] [DOM] _onDelegateCallback() {"eventType":"didChangeAuthorizationStatus","status":"AuthorizationStatusAuthorized"}
+2014-10-31 14:10:49.548 DJ-Jazzy-Jeff[24047:4079533] [Default measuredPower will be used.
+2014-10-31 14:10:49.548 DJ-Jazzy-Jeff[24047:4079533] Advertising is accepted, but won't start until peripheral manager is powered on.
+2014-10-31 14:13:34.017 DJ-Jazzy-Jeff[24462:4083739] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/jlongstr/Library/Developer/CoreSimulator/Devices/5BAE2F93-1C00-4BD6-A7A1-628CCC0C9369/data/Containers/Data/Application/0794899D-FB76-4FD4-9A66-E2C3A076EB3E/Library/Cookies/Cookies.binarycookies
+2014-10-31 14:13:34.089 DJ-Jazzy-Jeff[24462:4083739] Apache Cordova native platform version 3.6.3 is starting.
+2014-10-31 14:13:34.090 DJ-Jazzy-Jeff[24462:4083739] Multi-tasking -> Device: YES, App: YES
+2014-10-31 14:13:34.094 DJ-Jazzy-Jeff[24462:4083739] Unlimited access to network resources
+2014-10-31 14:13:34.097 DJ-Jazzy-Jeff[24462:4083739] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+
+2014-10-31 14:13:34.368 DJ-Jazzy-Jeff[24462:4083739] Resetting plugins due to page load.
+2014-10-31 14:13:34.410 DJ-Jazzy-Jeff[24462:4083739] Finished load of: file:///Users/jlongstr/Library/Developer/CoreSimulator/Devices/5BAE2F93-1C00-4BD6-A7A1-628CCC0C9369/data/Containers/Bundle/Application/1498AEB0-5F59-4C22-A017-E6517840E0DD/DJ-Jazzy-Jeff.app/www/index.html
+2014-10-31 14:13:34.451 DJ-Jazzy-Jeff[24462:4083758] [DOM] registerDelegateCallbackId()
+2014-10-31 14:13:34.451 DJ-Jazzy-Jeff[24462:4083759] Registering delegate callback ID: LocationManager628492454
+2014-10-31 14:13:34.454 DJ-Jazzy-Jeff[24462:4083739] peripheralManagerDidUpdateState() state: PeripheralManagerStateUnsupported
+2014-10-31 14:13:34.454 DJ-Jazzy-Jeff[24462:4083761] peripheralManagerDidUpdateState: PeripheralManagerStateUnsupported
+2014-10-31 14:13:34.454 DJ-Jazzy-Jeff[24462:4083761] Converted peripheralManagerDidUpdateState: into peripheralManagerDidUpdateState
+2014-10-31 14:13:34.455 DJ-Jazzy-Jeff[24462:4083761] [DOM] _onDelegateCallback() null
+2014-10-31 14:13:34.455 DJ-Jazzy-Jeff[24462:4083758] [DOM] DEFAULT peripheralManagerDidUpdateState()
+2014-10-31 14:13:34.455 DJ-Jazzy-Jeff[24462:4083759] [DOM] _onDelegateCallback() {"eventType":"peripheralManagerDidUpdateState","state":"PeripheralManagerStateUnsupported"}
+2014-10-31 14:13:34.458 DJ-Jazzy-Jeff[24462:4083759] [Default measuredPower will be used.
+2014-10-31 14:13:34.458 DJ-Jazzy-Jeff[24462:4083759] Advertising is accepted, but won't start until peripheral manager is powered on.
+2014-10-31 14:13:34.459 DJ-Jazzy-Jeff[24462:4083739] didChangeAuthorizationStatus
+2014-10-31 14:13:34.459 DJ-Jazzy-Jeff[24462:4083739] didChangeAuthorizationStatus: 3 => AuthorizationStatusAuthorized
+2014-10-31 14:13:34.459 DJ-Jazzy-Jeff[24462:4083739] Converted locationManager:didChangeAuthorizationStatus: into didChangeAuthorizationStatus
+2014-10-31 14:13:34.465 DJ-Jazzy-Jeff[24462:4083758] [DOM] DEFAULT didChangeAuthorizationStatus()
+2014-10-31 14:13:34.465 DJ-Jazzy-Jeff[24462:4083759] [DOM] _onDelegateCallback() {"eventType":"didChangeAuthorizationStatus","status":"AuthorizationStatusAuthorized"}
+2014-10-31 14:15:46.006 DJ Jazzy Jeff[24901:4087170] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/jlongstr/Library/Developer/CoreSimulator/Devices/5BAE2F93-1C00-4BD6-A7A1-628CCC0C9369/data/Containers/Data/Application/7A8B85CA-5D20-43BE-9815-1FDCF81AD467/Library/Cookies/Cookies.binarycookies
+2014-10-31 14:15:46.082 DJ Jazzy Jeff[24901:4087170] Apache Cordova native platform version 3.6.3 is starting.
+2014-10-31 14:15:46.082 DJ Jazzy Jeff[24901:4087170] Multi-tasking -> Device: YES, App: YES
+2014-10-31 14:15:46.086 DJ Jazzy Jeff[24901:4087170] Unlimited access to network resources
+2014-10-31 14:15:46.089 DJ Jazzy Jeff[24901:4087170] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+
+2014-10-31 14:15:46.364 DJ Jazzy Jeff[24901:4087170] Resetting plugins due to page load.
+2014-10-31 14:15:46.416 DJ Jazzy Jeff[24901:4087170] Finished load of: file:///Users/jlongstr/Library/Developer/CoreSimulator/Devices/5BAE2F93-1C00-4BD6-A7A1-628CCC0C9369/data/Containers/Bundle/Application/3A54E11E-EA92-4533-988A-127BBC39FB73/DJ%20Jazzy%20Jeff.app/www/index.html
+2014-10-31 14:15:46.454 DJ Jazzy Jeff[24901:4087188] [DOM] registerDelegateCallbackId()
+2014-10-31 14:15:46.454 DJ Jazzy Jeff[24901:4087195] Registering delegate callback ID: LocationManager964702677
+2014-10-31 14:15:46.457 DJ Jazzy Jeff[24901:4087170] peripheralManagerDidUpdateState() state: PeripheralManagerStateUnsupported
+2014-10-31 14:15:46.457 DJ Jazzy Jeff[24901:4087188] peripheralManagerDidUpdateState: PeripheralManagerStateUnsupported
+2014-10-31 14:15:46.457 DJ Jazzy Jeff[24901:4087170] didChangeAuthorizationStatus
+2014-10-31 14:15:46.457 DJ Jazzy Jeff[24901:4087188] Converted peripheralManagerDidUpdateState: into peripheralManagerDidUpdateState
+2014-10-31 14:15:46.457 DJ Jazzy Jeff[24901:4087170] didChangeAuthorizationStatus: 3 => AuthorizationStatusAuthorized
+2014-10-31 14:15:46.457 DJ Jazzy Jeff[24901:4087170] Converted locationManager:didChangeAuthorizationStatus: into didChangeAuthorizationStatus
+2014-10-31 14:15:46.459 DJ Jazzy Jeff[24901:4087187] [DOM] _onDelegateCallback() null
+2014-10-31 14:15:46.459 DJ Jazzy Jeff[24901:4087187] [DOM] _onDelegateCallback() {"eventType":"peripheralManagerDidUpdateState","state":"PeripheralManagerStateUnsupported"}
+2014-10-31 14:15:46.459 DJ Jazzy Jeff[24901:4087188] [DOM] DEFAULT peripheralManagerDidUpdateState()
+2014-10-31 14:15:46.459 DJ Jazzy Jeff[24901:4087188] [DOM] DEFAULT didChangeAuthorizationStatus()
+2014-10-31 14:15:46.459 DJ Jazzy Jeff[24901:4087187] [DOM] _onDelegateCallback() {"eventType":"didChangeAuthorizationStatus","status":"AuthorizationStatusAuthorized"}
+2014-10-31 14:15:46.463 DJ Jazzy Jeff[24901:4087187] [Default measuredPower will be used.
+2014-10-31 14:15:46.463 DJ Jazzy Jeff[24901:4087187] Advertising is accepted, but won't start until peripheral manager is powered on.

@@ -1,5 +1,12 @@
 var beaconProperties = {};
 
+
+var updateStatus = function(text){
+  var statusText = document.getElementById('status');
+  statusText.innerHTML = text;
+};
+
+
 var onDeviceReady = function(){
   beaconProperties = {
     uuid        : device.uuid,
@@ -12,8 +19,8 @@ var onDeviceReady = function(){
   for(var key in beaconProperties){
     var val = beaconProperties[key];
     if(key == 'uuid')
-      val = beaconProperties[key].replace('-', '').toLowerCase();
-    var partial = [key, ':', val, ' '].join();
+      val = beaconProperties[key].replace(/-/g, '').toLowerCase();
+    var partial = [key, ':', val, ' '].join('');
 
     identifiersString += partial;
   }
@@ -26,8 +33,6 @@ var onDeviceReady = function(){
     identifiersString
   ].join('');
 
-  cordova.plugins.locationManager.requestAlwaysAuthorization();
-
   var beaconRegion = new cordova.plugins.locationManager.BeaconRegion(
     beaconProperties.identifier,
     beaconProperties.uuid,
@@ -35,7 +40,17 @@ var onDeviceReady = function(){
     beaconProperties.minor
   );
 
-  cordova.plugins.locationManager.startAdvertising(beaconRegion);
+  cordova.plugins.locationManager.requestAlwaysAuthorization();
+  cordova.plugins.locationManager.isAdvertisingAvailable()
+    .then(function(isSupported){
+      if(isSupported){
+        cordova.plugins.locationManager.startAdvertising(beaconRegion)
+          .fail(updateStatus)
+          .done(function(){ updateStatus('currently broadcasting location...'); });
+      } else
+        updateStatus('Beacon advertising not supported :(');
+    })
+    .fail(updateStatus);
 };
 
 
