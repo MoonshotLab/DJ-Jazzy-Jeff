@@ -1,6 +1,6 @@
 node_modules
+.DS_Store
 
+# Sound Files
 clips/*
 !clips/.gitkeep
-
-.DS_Store
