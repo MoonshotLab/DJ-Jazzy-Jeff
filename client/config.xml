@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.joelongstreet.jazzy-jeff" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>DJ Jazzy Jeff</name>
+    <name>DJ-Jazzy-Jeff</name>
     <description>
         The client application for https://github.com/MoonshotLab/DJ-Jazzy-Jeff
     </description>

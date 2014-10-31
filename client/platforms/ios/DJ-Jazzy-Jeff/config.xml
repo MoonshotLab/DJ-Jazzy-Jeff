@@ -25,7 +25,7 @@
     <feature name="Device">
         <param name="ios-package" value="CDVDevice" />
     </feature>
-    <name>DJ Jazzy Jeff</name>
+    <name>DJ-Jazzy-Jeff</name>
     <description>
         The client application for https://github.com/MoonshotLab/DJ-Jazzy-Jeff
     </description>
