@@ -10,7 +10,11 @@ var onDeviceReady = function(){
 
   var identifiersString = '';
   for(var key in beaconProperties){
-    var partial = key + ':' + beaconProperties[key] + ' ';
+    var val = beaconProperties[key];
+    if(key == 'uuid')
+      val = beaconProperties[key].replace('-', '').toLowerCase();
+    var partial = [key, ':', val, ' '].join();
+
     identifiersString += partial;
   }
 
@@ -21,6 +25,17 @@ var onDeviceReady = function(){
     '&body=',
     identifiersString
   ].join('');
+
+  cordova.plugins.locationManager.requestAlwaysAuthorization();
+
+  var beaconRegion = new cordova.plugins.locationManager.BeaconRegion(
+    beaconProperties.identifier,
+    beaconProperties.uuid,
+    beaconProperties.major,
+    beaconProperties.minor
+  );
+
+  cordova.plugins.locationManager.startAdvertising(beaconRegion);
 };
 
 

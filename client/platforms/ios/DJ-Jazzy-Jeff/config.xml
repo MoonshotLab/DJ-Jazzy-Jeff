@@ -19,6 +19,12 @@
     <feature name="LocalStorage">
         <param name="ios-package" value="CDVLocalStorage" />
     </feature>
+    <feature name="LocationManager">
+        <param name="ios-package" value="CDVLocationManager" />
+    </feature>
+    <feature name="Device">
+        <param name="ios-package" value="CDVDevice" />
+    </feature>
     <name>DJ-Jazzy-Jeff</name>
     <description>
         The client application for https://github.com/MoonshotLab/DJ-Jazzy-Jeff
@@ -28,5 +34,5 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
-    <preference name="Fullscreen" value="true" />
+    <preference name="DisallowOverscroll" value="true" />
 </widget>
