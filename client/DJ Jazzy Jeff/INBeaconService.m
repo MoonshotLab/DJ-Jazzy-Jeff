@@ -188,8 +188,9 @@
 - (void)startAdvertising
 {
     
-    NSDictionary *advertisingData = @{CBAdvertisementDataLocalNameKey:@"vicinity-peripheral",
-                                      CBAdvertisementDataServiceUUIDsKey:@[identifier]};
+    NSDictionary *advertisingData = @{CBAdvertisementDataLocalNameKey:_userName,
+                                      CBAdvertisementDataServiceUUIDsKey:@[identifier],
+                                      };
     
     // Start advertising over BLE
     [peripheralManager startAdvertising:advertisingData];
