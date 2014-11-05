@@ -6,14 +6,15 @@
 //  Copyright (c) 2014 Joe Longstreet. All rights reserved.
 //
 
-#import <MessageUI/MessageUI.h>
 #import <CoreGraphics/CoreGraphics.h>
 #import "ViewController.h"
 #import "INBeaconService.h"
 
-@interface ViewController () <INBeaconServiceDelegate, MFMailComposeViewControllerDelegate>
+@interface ViewController () <INBeaconServiceDelegate, UIPickerViewDataSource, UIPickerViewDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *userNameView;
+@property (weak, nonatomic) IBOutlet UIPickerView *songSelector;
 @property NSString *userName;
+@property NSArray *songNames;
 
 
 @end
@@ -22,6 +23,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    _songNames = [NSArray arrayWithObjects: @"Total Eclipse of the Heart", @"I believe in a thing called love", @"Never gonna give you up", nil];
 
     NSUserDefaults *userData = [NSUserDefaults standardUserDefaults];
     NSString *storedUserName = [userData objectForKey:@"userName"];
@@ -32,8 +35,10 @@
         [userData synchronize];
         
         [self registerUser:_userName];
-    } else
+    } else {
+        _userName = storedUserName;
         [self showUserName];
+    }
     
     INBeaconService *beaconService = [[INBeaconService alloc] initWithIdentifier:@"CB284D88-5317-4FB4-9621-C5A3A49E6155"];
 
@@ -50,10 +55,23 @@
     NSLog(error);
 }
 
+- (NSInteger) numberOfComponentsInPickerView:(UIPickerView *)pickerView{
+    return 1;
+}
+
+- (NSInteger) pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
+	return _songNames.count;
+}
+
+- (NSString *) pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
+    return _songNames[row];
+}
+
 - (void) showUserName {
     NSMutableString *userNameText = [NSMutableString string];
-    [userNameText appendString:@"username :"];
+    [userNameText appendString:@"username: "];
     [userNameText appendString:_userName];
+    _userNameView.text = userNameText;
 }
 
 - (BOOL)registerUser:(NSString *)userName {

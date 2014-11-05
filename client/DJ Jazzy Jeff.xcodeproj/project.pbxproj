@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DE32C5AF1A081A7B0097A56C /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE32C5AE1A081A7B0097A56C /* MessageUI.framework */; };
 		DE34E7B11A07F2790093F203 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DE34E7B01A07F2790093F203 /* main.m */; };
 		DE34E7B41A07F2790093F203 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DE34E7B31A07F2790093F203 /* AppDelegate.m */; };
 		DE34E7B71A07F2790093F203 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE34E7B61A07F2790093F203 /* ViewController.m */; };
@@ -80,7 +79,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE32C5AF1A081A7B0097A56C /* MessageUI.framework in Frameworks */,
 				DE34E8171A07FBFE0093F203 /* CoreGraphics.framework in Frameworks */,
 				DE34E8151A07FBCB0093F203 /* Foundation.framework in Frameworks */,
 				DE34E8131A07FBA40093F203 /* UIKit.framework in Frameworks */,
