@@ -7,6 +7,8 @@
 //
 
 #import <CoreGraphics/CoreGraphics.h>
+#import <Foundation/Foundation.h>
+#import <SBJson/SBJson4.h>
 #import "ViewController.h"
 #import "INBeaconService.h"
 
@@ -14,7 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *userNameView;
 @property (weak, nonatomic) IBOutlet UIPickerView *songSelector;
 @property NSString *userName;
-@property NSArray *songNames;
+@property NSMutableArray *songNames;
 
 
 @end
@@ -23,8 +25,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    _songNames = [NSArray arrayWithObjects: @"Total Eclipse of the Heart", @"I believe in a thing called love", @"Never gonna give you up", nil];
+
+    [self fetchSongs];
 
     NSUserDefaults *userData = [NSUserDefaults standardUserDefaults];
     NSString *storedUserName = [userData objectForKey:@"userName"];
@@ -48,6 +50,7 @@
 }
 
 - (void)connection:(NSURLConnection *) connection didReceiveData:(NSData *)data{
+    NSLog(data);
     [self showUserName];
 }
 
@@ -74,8 +77,7 @@
     _userNameView.text = userNameText;
 }
 
-- (BOOL)registerUser:(NSString *)userName {
-    
+- (void)registerUser:(NSString *)userName {
     NSString *postString = [NSString stringWithFormat:@"username=%@", userName];
     NSData *postData = [postString dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
     NSString *postLength = [NSString stringWithFormat:@"%d", [postData length]];
@@ -87,13 +89,23 @@
     [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
     [request setHTTPBody:postData];
     
-    NSURLConnection *urlConnection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
-    if(urlConnection)
-        NSLog(@"Connection Made");
-    else
-        NSLog(@"Connection failed");
+    [[NSURLConnection alloc] initWithRequest:request delegate:self];
+}
+
+-(void)fetchSongs {
+    NSURL *url = [NSURL URLWithString:@"http://localhost:3000/songs"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    NSURLResponse *response = nil;
+    NSError *error = nil;
+    NSData *songData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    NSArray *jsonArray = [NSJSONSerialization JSONObjectWithData:songData options:NSJSONReadingMutableContainers error:&error];;
     
-    return true;
+    _songNames = [[NSMutableArray alloc] initWithCapacity:jsonArray.count];
+    
+    for(NSDictionary *item in jsonArray) {
+        NSString *title = [item objectForKey:@"title"];
+        [_songNames addObject: title];
+    }
 }
 
 @end
