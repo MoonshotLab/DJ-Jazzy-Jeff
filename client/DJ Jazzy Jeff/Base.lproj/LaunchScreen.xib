@@ -14,7 +14,7 @@
                     <rect key="frame" x="-7" y="0.0" width="649" height="775"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Hat" translatesAutoresizingMaskIntoConstraints="NO" id="yWJ-gx-BRc">
-                            <rect key="frame" x="123" y="147" width="403" height="482"/>
+                            <rect key="frame" x="174" y="207" width="301" height="361"/>
                         </imageView>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

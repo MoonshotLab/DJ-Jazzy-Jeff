@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,42 +17,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OKl-4d-xDA">
-                                <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="0.0"/>
-                                </variation>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P6g-0h-iOh">
-                                <rect key="frame" x="242" y="107" width="117" height="30"/>
-                                <state key="normal" title="Send Device Info">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" text="Before theme music plays, you'll need to first send your device info via e-mail" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8jv-St-pBL">
-                                <rect key="frame" x="164" y="46" width="278" height="53"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3cN-NH-CH5"/>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="Waiting for beacon approval..." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="XZn-da-smw">
-                                <rect key="frame" x="183" y="200" width="240" height="30"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Jeff-And-Will" translatesAutoresizingMaskIntoConstraints="NO" id="BLZ-I6-9H8">
-                                <rect key="frame" x="0.0" y="297" width="639" height="335"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Username:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FTj-vh-d5H">
+                                <rect key="frame" x="128" y="28" width="344" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Jeff-And-Will" translatesAutoresizingMaskIntoConstraints="NO" id="BLZ-I6-9H8">
+                                <rect key="frame" x="0.0" y="101" width="600" height="600"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="4K4-Og-M19"/>
+                                    <constraint firstAttribute="height" constant="350" id="AIY-Rc-fFg"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="P6g-0h-iOh" secondAttribute="centerX" id="1WG-kw-rMw"/>
-                            <constraint firstAttribute="centerX" secondItem="8jv-St-pBL" secondAttribute="centerX" id="GEb-tg-Mbp"/>
-                            <constraint firstAttribute="centerX" secondItem="XZn-da-smw" secondAttribute="centerX" id="ZD6-ph-NJv"/>
-                            <constraint firstAttribute="centerX" secondItem="BLZ-I6-9H8" secondAttribute="centerX" id="hg0-GZ-mf0"/>
+                            <constraint firstItem="BLZ-I6-9H8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="3EU-t9-Vbo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BLZ-I6-9H8" secondAttribute="trailing" constant="-16" id="67L-jz-94E"/>
+                            <constraint firstAttribute="centerX" secondItem="FTj-vh-d5H" secondAttribute="centerX" id="J2K-oT-Dsi"/>
+                            <constraint firstItem="FTj-vh-d5H" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="Jjb-De-IhT"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="BLZ-I6-9H8" secondAttribute="bottom" id="UHX-yI-495"/>
+                            <constraint firstAttribute="centerX" secondItem="BLZ-I6-9H8" secondAttribute="centerX" id="V7A-71-wEl"/>
+                            <constraint firstAttribute="centerX" secondItem="BLZ-I6-9H8" secondAttribute="centerX" id="Xob-4N-bGo"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="3EU-t9-Vbo"/>
+                                <exclude reference="67L-jz-94E"/>
+                                <exclude reference="V7A-71-wEl"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="userNameView" destination="FTj-vh-d5H" id="RXK-Wt-RPs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
