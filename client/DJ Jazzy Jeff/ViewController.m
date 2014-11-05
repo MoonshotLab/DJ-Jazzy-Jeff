@@ -76,11 +76,11 @@
 
 - (BOOL)registerUser:(NSString *)userName {
     
-    NSString *postString = [NSString stringWithFormat:@"username=%@", @"username"];
+    NSString *postString = [NSString stringWithFormat:@"username=%@", userName];
     NSData *postData = [postString dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
     NSString *postLength = [NSString stringWithFormat:@"%d", [postData length]];
-    NSMutableURLRequest *request = [NSMutableURLRequest alloc];
-
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+    
     [request setURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://localhost:3000/user/create"]]];
     [request setHTTPMethod:@"POST"];
     [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
