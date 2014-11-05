@@ -2,9 +2,7 @@
   "name": "server",
   "version": "0.0.1",
   "private": true,
-  "scripts": {
-    "start": "node app"
-  },
+  "main" : "app.js",
   "dependencies": {
     "express": "~4.2.0",
     "body-parser": "~1.0.0",
