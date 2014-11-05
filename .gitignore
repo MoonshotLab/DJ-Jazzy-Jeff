@@ -2,5 +2,5 @@ node_modules
 .DS_Store
 
 # Sound Files
-clips/*
-!clips/.gitkeep
+server/clips/*
+server/!clips/.gitkeep

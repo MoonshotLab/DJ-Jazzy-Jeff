@@ -1,6 +1,8 @@
 var express = require('express');
 var path = require('path');
 var bodyParser = require('body-parser');
+var users = require('./users');
+var songs = require('./songs');
 var app = express();
 
 app.use(bodyParser.json());
@@ -13,11 +15,16 @@ app.get('/', function(req, res){
 });
 
 app.get('/songs', function(req, res){
+  res.send(songs);
+});
 
+app.get('/users', function(req, res){
+  res.send(users);
 });
 
 app.post('/user/create', function(req, res){
-  console.log(req.params);
+  console.log(req.body.username);
+  res.send({ 'message' : 'User Created' });
 });
 
 
@@ -40,5 +47,5 @@ app.use(function(err, req, res, next) {
 // Start Server
 app.set('port', process.env.PORT || 3000);
 var server = app.listen(app.get('port'), function() {
-  debug('Express server listening on port ' + server.address().port);
+  console.log('Express server listening on port ' + server.address().port);
 });
