@@ -29,12 +29,11 @@
 
     NSUserDefaults *userData = [NSUserDefaults standardUserDefaults];
     NSString *storedUserName = [userData objectForKey:@"userName"];
-    
+
     if(![storedUserName length]){
         _userName = [[NSUUID UUID] UUIDString];
         [userData setValue:_userName forKey:@"userName"];
         [userData synchronize];
-        
         [self registerUser:_userName];
     } else {
         _userName = storedUserName;
@@ -82,7 +81,7 @@
     NSHTTPURLResponse *response = nil;
     NSError *error = nil;
     
-    [request setURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://localhost:3000/user/update"]]];
+    [request setURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://infinite-waters-6799.herokuapp.com/user/update"]]];
     [request setHTTPMethod:@"POST"];
     [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
     [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
@@ -102,7 +101,23 @@
 
 - (void)service:(INBeaconService *)service foundDeviceUUID:(NSString *)uuid withRange:(INDetectorRange)range
 {
-    NSLog(@"%@", uuid);
+    NSString *rangeString;
+    switch (range) {
+        case INDetectorRangeFar:
+            rangeString = @"far";
+            break;
+        case INDetectorRangeNear:
+            rangeString = @"near";
+            break;
+        case INDetectorRangeImmediate:
+            rangeString = @"near";
+            break;
+        default:
+            rangeString = @"?";
+            break;
+    }
+    
+    NSLog(@"UUID: %@, Range: %@", uuid, rangeString);
 }
 
 - (void) showUserName {
@@ -120,7 +135,7 @@
     NSHTTPURLResponse *response = nil;
     NSError *error = nil;
     
-    [request setURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://localhost:3000/user/create"]]];
+    [request setURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://infinite-waters-6799.herokuapp.com/user/create"]]];
     [request setHTTPMethod:@"POST"];
     [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
     [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
@@ -131,7 +146,7 @@
 }
 
 -(void)fetchSongs {
-    NSURL *url = [NSURL URLWithString:@"http://localhost:3000/songs"];
+    NSURL *url = [NSURL URLWithString:@"https://infinite-waters-6799.herokuapp.com/songs"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     NSURLResponse *response = nil;
     NSError *error = nil;

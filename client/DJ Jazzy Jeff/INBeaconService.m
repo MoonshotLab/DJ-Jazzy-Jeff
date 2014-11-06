@@ -49,6 +49,7 @@
 @implementation INBeaconService
 {
     CBUUID *identifier;
+    NSString *peripheralName;
     INDetectorRange identifierRange;
     
     CBCentralManager *centralManager;
@@ -229,10 +230,11 @@
     if (DEBUG_PERIPHERAL) {
         NSLog(@"did discover peripheral: %@, data: %@, %1.2f", [peripheral.identifier UUIDString], advertisementData, [RSSI floatValue]);
         
-        CBUUID *uuid = [advertisementData[CBAdvertisementDataLocalNameKey] firstObject];
+        CBUUID *uuid = [advertisementData[CBAdvertisementDataServiceUUIDsKey] firstObject];
         NSLog(@"service uuid: %@", [uuid representativeString]);
     }
     
+    peripheralName = [advertisementData objectForKey:@"kCBAdvDataLocalName"];
     identifierRange = [self convertRSSItoINProximity:[RSSI floatValue]];
 }
 
@@ -252,7 +254,7 @@
 {
     [self performBlockOnDelegates:^(id<INBeaconServiceDelegate>delegate) {
         
-        [delegate service:self foundDeviceUUID:[identifier representativeString] withRange:identifierRange];
+        [delegate service:self foundDeviceUUID:peripheralName withRange:identifierRange];
         
     } complete:^{
         // timeout the beacon to unknown position
