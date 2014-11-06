@@ -14,7 +14,8 @@
 @interface ViewController () <INBeaconServiceDelegate, UIPickerViewDataSource, UIPickerViewDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *userNameView;
 @property (weak, nonatomic) IBOutlet UIPickerView *songSelector;
-//@property (weak, nonatomic) IBOutlet UIButton *saveButton;
+@property (weak, nonatomic) IBOutlet UIButton *saveButton;
+@property (weak, nonatomic) IBOutlet UIImageView *background;
 @property NSString *userName;
 @property NSString *selectedSongId;
 @property NSMutableDictionary *songs;
@@ -24,7 +25,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
     [self fetchSongs];
 
     NSUserDefaults *userData = [NSUserDefaults standardUserDefaults];
@@ -42,10 +42,18 @@
     }
     
     INBeaconService *beaconService = [[INBeaconService alloc] initWithIdentifier:@"CB284D88-5317-4FB4-9621-C5A3A49E6155"];
-
     [beaconService setUserName:_userName];
     [beaconService addDelegate:self];
-    [beaconService startBroadcasting];
+    
+    UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
+    if (orientation == UIDeviceOrientationPortrait)
+        [beaconService startBroadcasting];
+    else {
+        _songSelector.hidden = YES;
+        _saveButton.hidden = YES;
+        _background.contentMode = UIViewContentModeScaleAspectFill;
+        [beaconService startDetecting];
+    }
 }
 
 - (NSInteger) numberOfComponentsInPickerView:(UIPickerView *)pickerView{
@@ -90,6 +98,11 @@
 
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:userMessage message:@"" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
     [alert show];
+}
+
+- (void)service:(INBeaconService *)service foundDeviceUUID:(NSString *)uuid withRange:(INDetectorRange)range
+{
+    NSLog(@"%@", uuid);
 }
 
 - (void) showUserName {

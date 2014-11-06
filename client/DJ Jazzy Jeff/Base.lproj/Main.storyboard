@@ -33,10 +33,11 @@
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Username:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FTj-vh-d5H">
                                 <rect key="frame" x="128" y="559" width="344" height="21"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.45000000000000001" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
-                                <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="shadowColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ukl-G2-Y7p">
                                 <rect key="frame" x="253" y="170" width="95" height="30"/>
@@ -84,6 +85,8 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="background" destination="BLZ-I6-9H8" id="NmW-ok-Psi"/>
+                        <outlet property="saveButton" destination="ukl-G2-Y7p" id="hpR-5e-5t9"/>
                         <outlet property="songSelector" destination="wfs-TQ-ZAo" id="5Vt-2s-jfQ"/>
                         <outlet property="userNameView" destination="FTj-vh-d5H" id="RXK-Wt-RPs"/>
                     </connections>

@@ -39,9 +39,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		359A87820F60EC7578B81CFF /* Pods-DJ Jazzy Jeff.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DJ Jazzy Jeff.release.xcconfig"; path = "Pods/Target Support Files/Pods-DJ Jazzy Jeff/Pods-DJ Jazzy Jeff.release.xcconfig"; sourceTree = "<group>"; };
-		7492E575AFF3A967B9842320 /* libPods-DJ Jazzy Jeff.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DJ Jazzy Jeff.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DC19AE42B3465CDD8B0A69E9 /* Pods-DJ Jazzy Jeff.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DJ Jazzy Jeff.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DJ Jazzy Jeff/Pods-DJ Jazzy Jeff.debug.xcconfig"; sourceTree = "<group>"; };
 		DE32C5AE1A081A7B0097A56C /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		DE34E7AB1A07F2790093F203 /* DJ Jazzy Jeff.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DJ Jazzy Jeff.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE34E7AF1A07F2790093F203 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -103,18 +100,8 @@
 		668715FDA6FE7B183E3C1D99 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7492E575AFF3A967B9842320 /* libPods-DJ Jazzy Jeff.a */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		A476E125D741CD48B114E12F /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				DC19AE42B3465CDD8B0A69E9 /* Pods-DJ Jazzy Jeff.debug.xcconfig */,
-				359A87820F60EC7578B81CFF /* Pods-DJ Jazzy Jeff.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		DE34E7A21A07F2790093F203 = {
@@ -129,7 +116,6 @@
 				DE34E7AD1A07F2790093F203 /* DJ Jazzy Jeff */,
 				DE34E7C71A07F2790093F203 /* DJ Jazzy JeffTests */,
 				DE34E7AC1A07F2790093F203 /* Products */,
-				A476E125D741CD48B114E12F /* Pods */,
 				668715FDA6FE7B183E3C1D99 /* Frameworks */,
 			);
 			sourceTree = "<group>";

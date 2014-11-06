@@ -229,7 +229,7 @@
     if (DEBUG_PERIPHERAL) {
         NSLog(@"did discover peripheral: %@, data: %@, %1.2f", [peripheral.identifier UUIDString], advertisementData, [RSSI floatValue]);
         
-        CBUUID *uuid = [advertisementData[CBAdvertisementDataServiceUUIDsKey] firstObject];
+        CBUUID *uuid = [advertisementData[CBAdvertisementDataLocalNameKey] firstObject];
         NSLog(@"service uuid: %@", [uuid representativeString]);
     }
     
