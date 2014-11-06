@@ -48,14 +48,6 @@
     [beaconService startBroadcasting];
 }
 
-- (void)connection:(NSURLConnection *) connection didReceiveData:(NSData *)data{
-    [self showUserName];
-}
-
-- (void)connection:(NSURLConnection *) connection didFailWithError:(NSError *)error{
-    NSLog(@"%@", error);
-}
-
 - (NSInteger) numberOfComponentsInPickerView:(UIPickerView *)pickerView{
     return 1;
 }
@@ -96,7 +88,7 @@
     if(statusCode == 200)
         userMessage = @"Saved!";
 
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Status" message:userMessage delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:userMessage message:@"" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
     [alert show];
 }
 
@@ -112,6 +104,8 @@
     NSData *postData = [postString dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
     NSString *postLength = [NSString stringWithFormat:@"%lu", (unsigned long)[postData length]];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+    NSHTTPURLResponse *response = nil;
+    NSError *error = nil;
     
     [request setURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://localhost:3000/user/create"]]];
     [request setHTTPMethod:@"POST"];
@@ -119,8 +113,8 @@
     [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
     [request setHTTPBody:postData];
     
-    NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
-    NSLog(@"%@", connection);
+    [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    [self showUserName];
 }
 
 -(void)fetchSongs {
