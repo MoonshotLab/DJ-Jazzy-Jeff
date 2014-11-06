@@ -14,7 +14,7 @@
 @interface ViewController () <INBeaconServiceDelegate, UIPickerViewDataSource, UIPickerViewDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *userNameView;
 @property (weak, nonatomic) IBOutlet UIPickerView *songSelector;
-@property (weak, nonatomic) IBOutlet UIButton *saveButton;
+//@property (weak, nonatomic) IBOutlet UIButton *saveButton;
 @property NSString *userName;
 @property NSString *selectedSongId;
 @property NSMutableDictionary *songs;
@@ -72,6 +72,32 @@
 - (NSString *) pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
     NSArray *songNames = [_songs objectForKey:@"names"];
     return songNames[row];
+}
+
+- (IBAction)saveButton:(id)sender {
+    NSString *postString = [NSString stringWithFormat:@"username=%@&songId=%@", _userName, _selectedSongId];
+    NSData *postData = [postString dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+    NSString *postLength = [NSString stringWithFormat:@"%lu", (unsigned long)[postData length]];
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+    NSHTTPURLResponse *response = nil;
+    NSError *error = nil;
+    
+    [request setURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://localhost:3000/user/update"]]];
+    [request setHTTPMethod:@"POST"];
+    [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
+    [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+    [request setHTTPBody:postData];
+    
+    [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    long statusCode = [response statusCode];
+    
+    NSString *userMessage = @"Could not save :(";
+
+    if(statusCode == 200)
+        userMessage = @"Saved!";
+
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Status" message:userMessage delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
 }
 
 - (void) showUserName {

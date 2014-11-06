@@ -22,6 +22,11 @@ app.get('/users', function(req, res){
   res.send(users);
 });
 
+app.post('/user/update', function(req, res){
+  console.log(req.body.username, req.body.songId);
+  res.send({ 'message' : 'Saved' });
+});
+
 app.post('/user/create', function(req, res){
   console.log(req.body.username);
   res.send({ 'message' : 'User Created' });

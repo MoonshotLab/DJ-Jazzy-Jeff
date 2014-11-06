@@ -48,6 +48,9 @@
                                 <state key="normal" title="Save">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="saveButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xsp-Cm-x02"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -81,7 +84,6 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="saveButton" destination="ukl-G2-Y7p" id="Vrq-cl-nOg"/>
                         <outlet property="songSelector" destination="wfs-TQ-ZAo" id="5Vt-2s-jfQ"/>
                         <outlet property="userNameView" destination="FTj-vh-d5H" id="RXK-Wt-RPs"/>
                     </connections>
