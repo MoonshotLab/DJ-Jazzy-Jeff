@@ -8,17 +8,15 @@
 
 #import <CoreGraphics/CoreGraphics.h>
 #import <Foundation/Foundation.h>
-#import <SBJson/SBJson4.h>
 #import "ViewController.h"
 #import "INBeaconService.h"
 
 @interface ViewController () <INBeaconServiceDelegate, UIPickerViewDataSource, UIPickerViewDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *userNameView;
 @property (weak, nonatomic) IBOutlet UIPickerView *songSelector;
+@property (weak, nonatomic) IBOutlet UIButton *saveButton;
 @property NSString *userName;
-@property NSMutableArray *songNames;
-
-
+@property NSMutableDictionary *songs;
 @end
 
 @implementation ViewController
@@ -50,7 +48,6 @@
 }
 
 - (void)connection:(NSURLConnection *) connection didReceiveData:(NSData *)data{
-    NSLog(data);
     [self showUserName];
 }
 
@@ -62,12 +59,18 @@
     return 1;
 }
 
+- (int) pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
+    NSArray *songIds = [_songs objectForKey:@"ids"];
+    return songIds[row];
+}
+
 - (NSInteger) pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
-	return _songNames.count;
+    return [[_songs objectForKey:@"ids"] count];
 }
 
 - (NSString *) pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
-    return _songNames[row];
+    NSArray *songNames = [_songs objectForKey:@"names"];
+    return songNames[row];
 }
 
 - (void) showUserName {
@@ -98,14 +101,19 @@
     NSURLResponse *response = nil;
     NSError *error = nil;
     NSData *songData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
-    NSArray *jsonArray = [NSJSONSerialization JSONObjectWithData:songData options:NSJSONReadingMutableContainers error:&error];;
-    
-    _songNames = [[NSMutableArray alloc] initWithCapacity:jsonArray.count];
+    NSArray *jsonArray = [NSJSONSerialization JSONObjectWithData:songData options:NSJSONReadingMutableContainers error:&error];
+
+    NSMutableArray *songNames = [[NSMutableArray alloc] initWithCapacity:jsonArray.count];
+    NSMutableArray *songIds = [[NSMutableArray alloc] initWithCapacity:jsonArray.count];
+    _songs = [[NSMutableDictionary alloc] initWithCapacity:jsonArray.count];
     
     for(NSDictionary *item in jsonArray) {
-        NSString *title = [item objectForKey:@"title"];
-        [_songNames addObject: title];
+        [songNames addObject: [item objectForKey:@"title"]];
+        [songIds addObject: [item objectForKey:@"id"]];
     }
+    
+    [_songs setObject:songNames forKey:@"names"];
+    [_songs setObject:songIds forKey:@"ids"];
 }
 
 @end

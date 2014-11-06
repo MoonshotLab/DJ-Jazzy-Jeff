@@ -38,15 +38,28 @@
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ukl-G2-Y7p">
+                                <rect key="frame" x="253" y="170" width="95" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="95" id="1xr-fI-ezm"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="ukl-G2-Y7p" secondAttribute="centerX" id="0xD-52-tTc"/>
                             <constraint firstItem="BLZ-I6-9H8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="3EU-t9-Vbo"/>
                             <constraint firstAttribute="trailingMargin" secondItem="BLZ-I6-9H8" secondAttribute="trailing" constant="-16" id="67L-jz-94E"/>
-                            <constraint firstItem="wfs-TQ-ZAo" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="6Gt-pe-RbC"/>
+                            <constraint firstItem="wfs-TQ-ZAo" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-20" id="6Gt-pe-RbC"/>
                             <constraint firstAttribute="centerX" secondItem="FTj-vh-d5H" secondAttribute="centerX" id="J2K-oT-Dsi"/>
                             <constraint firstItem="FTj-vh-d5H" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="Jjb-De-IhT"/>
                             <constraint firstItem="wfs-TQ-ZAo" firstAttribute="top" secondItem="FTj-vh-d5H" secondAttribute="bottom" constant="15" id="OY6-Kt-Q5t"/>
+                            <constraint firstItem="ukl-G2-Y7p" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="150" id="QaS-od-7fA"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="BLZ-I6-9H8" secondAttribute="bottom" id="UHX-yI-495"/>
                             <constraint firstAttribute="centerX" secondItem="BLZ-I6-9H8" secondAttribute="centerX" id="V7A-71-wEl"/>
                             <constraint firstAttribute="centerX" secondItem="BLZ-I6-9H8" secondAttribute="centerX" id="Xob-4N-bGo"/>
@@ -59,6 +72,7 @@
                             <mask key="constraints">
                                 <exclude reference="OY6-Kt-Q5t"/>
                                 <exclude reference="abw-VE-7R9"/>
+                                <exclude reference="iKQ-QN-rqa"/>
                                 <exclude reference="3EU-t9-Vbo"/>
                                 <exclude reference="67L-jz-94E"/>
                                 <exclude reference="V7A-71-wEl"/>
@@ -67,6 +81,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="saveButton" destination="ukl-G2-Y7p" id="Vrq-cl-nOg"/>
                         <outlet property="songSelector" destination="wfs-TQ-ZAo" id="5Vt-2s-jfQ"/>
                         <outlet property="userNameView" destination="FTj-vh-d5H" id="RXK-Wt-RPs"/>
                     </connections>
