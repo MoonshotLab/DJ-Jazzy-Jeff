@@ -25,6 +25,8 @@
 		DE34E8131A07FBA40093F203 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE34E8121A07FBA40093F203 /* UIKit.framework */; };
 		DE34E8151A07FBCB0093F203 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE34E8141A07FBCB0093F203 /* Foundation.framework */; };
 		DE34E8171A07FBFE0093F203 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE34E8161A07FBFE0093F203 /* CoreGraphics.framework */; };
+		DEE8C8501A0BE5ED0012127E /* BogusBeacon.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE8C84F1A0BE5ED0012127E /* BogusBeacon.m */; };
+		DEE8C8531A0BF4BC0012127E /* BogusBeaconService.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE8C8521A0BF4BC0012127E /* BogusBeaconService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,10 @@
 		DE34E8121A07FBA40093F203 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DE34E8141A07FBCB0093F203 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DE34E8161A07FBFE0093F203 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DEE8C84E1A0BE5ED0012127E /* BogusBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BogusBeacon.h; sourceTree = "<group>"; };
+		DEE8C84F1A0BE5ED0012127E /* BogusBeacon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BogusBeacon.m; sourceTree = "<group>"; };
+		DEE8C8511A0BF4BC0012127E /* BogusBeaconService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BogusBeaconService.h; sourceTree = "<group>"; };
+		DEE8C8521A0BF4BC0012127E /* BogusBeaconService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BogusBeaconService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +181,10 @@
 			children = (
 				DE34E7D91A07F3A70093F203 /* INBeaconService.h */,
 				DE34E7DA1A07F3A70093F203 /* INBeaconService.m */,
+				DEE8C84E1A0BE5ED0012127E /* BogusBeacon.h */,
+				DEE8C84F1A0BE5ED0012127E /* BogusBeacon.m */,
+				DEE8C8511A0BF4BC0012127E /* BogusBeaconService.h */,
+				DEE8C8521A0BF4BC0012127E /* BogusBeaconService.m */,
 			);
 			name = System;
 			sourceTree = "<group>";
@@ -305,11 +315,13 @@
 			files = (
 				DE34E7F01A07FAD10093F203 /* EasedValue.m in Sources */,
 				DE34E7DB1A07F3A70093F203 /* INBeaconService.m in Sources */,
+				DEE8C8501A0BE5ED0012127E /* BogusBeacon.m in Sources */,
 				DE34E7EB1A07FAD10093F203 /* CBCentralManager+Ext.m in Sources */,
 				DE34E7EC1A07FAD10093F203 /* CBPeripheralManager+Ext.m in Sources */,
 				DE34E7ED1A07FAD10093F203 /* CBUUID+Ext.m in Sources */,
 				DE34E7EE1A07FAD10093F203 /* CLBeacon+Ext.m in Sources */,
 				DE34E7B71A07F2790093F203 /* ViewController.m in Sources */,
+				DEE8C8531A0BF4BC0012127E /* BogusBeaconService.m in Sources */,
 				DE34E7B41A07F2790093F203 /* AppDelegate.m in Sources */,
 				DE34E7B11A07F2790093F203 /* main.m in Sources */,
 			);

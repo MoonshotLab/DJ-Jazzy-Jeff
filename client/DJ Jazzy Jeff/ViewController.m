@@ -10,6 +10,10 @@
 #import <Foundation/Foundation.h>
 #import "ViewController.h"
 #import "INBeaconService.h"
+#import "BogusBeacon.h"
+
+static NSString *WEB_SERVICE_URL = @"https://infinite-waters-6799.herokuapp.com";
+//static NSString *WEB_SERVICE_URL = @"http://localhost:3000";
 
 @interface ViewController () <INBeaconServiceDelegate, UIPickerViewDataSource, UIPickerViewDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *userNameView;
@@ -18,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *background;
 @property NSString *userName;
 @property NSString *selectedSongId;
+@property NSString *webServiceURL;
 @property NSMutableDictionary *songs;
 @end
 
@@ -40,18 +45,17 @@
         [self showUserName];
     }
     
-    INBeaconService *beaconService = [[INBeaconService alloc] initWithIdentifier:@"CB284D88-5317-4FB4-9621-C5A3A49E6155"];
-    [beaconService setUserName:_userName];
-    [beaconService addDelegate:self];
-    
     UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
-    if (orientation == UIDeviceOrientationPortrait)
-        [beaconService startBroadcasting];
-    else {
+    if (orientation == UIDeviceOrientationPortrait){
+        BogusBeacon *beacon = [[BogusBeacon alloc] init:@"CB284D88-5317-4FB4-9621-C5A3A49E6155" : _userName];
+        [beacon startBroadcasting];
+    } else {
+        [[INBeaconService singleton] addDelegate:self];
+        [[INBeaconService singleton] startDetecting];
+
         _songSelector.hidden = YES;
         _saveButton.hidden = YES;
         _background.contentMode = UIViewContentModeScaleAspectFill;
-        [beaconService startDetecting];
     }
 }
 
@@ -81,7 +85,7 @@
     NSHTTPURLResponse *response = nil;
     NSError *error = nil;
     
-    [request setURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://infinite-waters-6799.herokuapp.com/user/update"]]];
+    [request setURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@/user/update", WEB_SERVICE_URL]]];
     [request setHTTPMethod:@"POST"];
     [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
     [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
@@ -135,7 +139,7 @@
     NSHTTPURLResponse *response = nil;
     NSError *error = nil;
     
-    [request setURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://infinite-waters-6799.herokuapp.com/user/create"]]];
+    [request setURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@/user/create", WEB_SERVICE_URL]]];
     [request setHTTPMethod:@"POST"];
     [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
     [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
@@ -146,7 +150,8 @@
 }
 
 -(void)fetchSongs {
-    NSURL *url = [NSURL URLWithString:@"https://infinite-waters-6799.herokuapp.com/songs"];
+    NSString *route = [NSString stringWithFormat:@"%@/songs", WEB_SERVICE_URL];
+    NSURL *url = [NSURL URLWithString:route];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     NSURLResponse *response = nil;
     NSError *error = nil;
