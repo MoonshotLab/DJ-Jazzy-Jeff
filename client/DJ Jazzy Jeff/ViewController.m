@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UIPickerView *songSelector;
 @property (weak, nonatomic) IBOutlet UIButton *saveButton;
 @property NSString *userName;
+@property NSString *selectedSongId;
 @property NSMutableDictionary *songs;
 @end
 
@@ -52,16 +53,16 @@
 }
 
 - (void)connection:(NSURLConnection *) connection didFailWithError:(NSError *)error{
-    NSLog(error);
+    NSLog(@"%@", error);
 }
 
 - (NSInteger) numberOfComponentsInPickerView:(UIPickerView *)pickerView{
     return 1;
 }
 
-- (int) pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
+- (void) pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
     NSArray *songIds = [_songs objectForKey:@"ids"];
-    return songIds[row];
+    _selectedSongId = songIds[row];
 }
 
 - (NSInteger) pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
@@ -83,7 +84,7 @@
 - (void)registerUser:(NSString *)userName {
     NSString *postString = [NSString stringWithFormat:@"username=%@", userName];
     NSData *postData = [postString dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
-    NSString *postLength = [NSString stringWithFormat:@"%d", [postData length]];
+    NSString *postLength = [NSString stringWithFormat:@"%lu", (unsigned long)[postData length]];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
     
     [request setURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://localhost:3000/user/create"]]];
@@ -92,7 +93,8 @@
     [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
     [request setHTTPBody:postData];
     
-    [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    NSLog(@"%@", connection);
 }
 
 -(void)fetchSongs {
