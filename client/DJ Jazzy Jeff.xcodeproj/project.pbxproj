@@ -25,7 +25,6 @@
 		DE34E8131A07FBA40093F203 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE34E8121A07FBA40093F203 /* UIKit.framework */; };
 		DE34E8151A07FBCB0093F203 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE34E8141A07FBCB0093F203 /* Foundation.framework */; };
 		DE34E8171A07FBFE0093F203 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE34E8161A07FBFE0093F203 /* CoreGraphics.framework */; };
-		DE5633BF1A0A80D6009F7F13 /* Data.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE5633BE1A0A80D6009F7F13 /* Data.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,7 +70,6 @@
 		DE34E8121A07FBA40093F203 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DE34E8141A07FBCB0093F203 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DE34E8161A07FBFE0093F203 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		DE5633BE1A0A80D6009F7F13 /* Data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Data.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,7 +130,6 @@
 		DE34E7AD1A07F2790093F203 /* DJ Jazzy Jeff */ = {
 			isa = PBXGroup;
 			children = (
-				DE5633BD1A0A80BA009F7F13 /* Resources */,
 				DE34E7DD1A07FA2D0093F203 /* Extension */,
 				DE34E7D81A07F3920093F203 /* System */,
 				DE34E7B21A07F2790093F203 /* AppDelegate.h */,
@@ -198,14 +195,6 @@
 				DE34E7EA1A07FAD10093F203 /* GCDSingleton.h */,
 			);
 			name = Extension;
-			sourceTree = "<group>";
-		};
-		DE5633BD1A0A80BA009F7F13 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				DE5633BE1A0A80D6009F7F13 /* Data.plist */,
-			);
-			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,7 +285,6 @@
 			files = (
 				DE34E7BA1A07F2790093F203 /* Main.storyboard in Resources */,
 				DE34E7BF1A07F2790093F203 /* LaunchScreen.xib in Resources */,
-				DE5633BF1A0A80D6009F7F13 /* Data.plist in Resources */,
 				DE34E7BC1A07F2790093F203 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
