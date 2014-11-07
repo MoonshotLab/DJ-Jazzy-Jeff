@@ -10,7 +10,7 @@
 #import <UIKit/UIKit.h>
 #import <CoreBluetooth/CoreBluetooth.h>
 
-static BOOL DEBUG = NO;
+static BOOL DEBUG = YES;
 
 
 @interface BogusBeacon() <CBPeripheralManagerDelegate>
@@ -24,9 +24,9 @@ static BOOL DEBUG = NO;
 
 
 - (id)init:(NSString *)channel :(NSString *)username {
-    _channel = [CBUUID UUIDWithString:channel];
-    _username = username;
-    _advertisingData = @{CBAdvertisementDataLocalNameKey:username, CBAdvertisementDataServiceUUIDsKey:@[_channel]};
+    _channel  = [CBUUID UUIDWithString:channel];
+    _username = [CBUUID UUIDWithString:username];
+    _advertisingData = @{CBAdvertisementDataServiceUUIDsKey:@[_username, _channel]};
     
     [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(heartBeat) userInfo:nil repeats:YES];
 
@@ -61,7 +61,7 @@ static BOOL DEBUG = NO;
 
 
 - (void)stopBroadcasting{
-    *_isBroadcasting = YES;
+    _isBroadcasting = YES;
     [peripheralManager stopAdvertising];
     peripheralManager = nil;
 }

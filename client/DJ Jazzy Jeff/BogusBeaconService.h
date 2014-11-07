@@ -23,6 +23,7 @@ typedef enum {
 - (void) stopDetecting;
 
 @property(readonly) CBUUID* channel;
-@property (readonly) BOOL* isDetecting;
+@property (readonly) BOOL isDetecting;
+@property (readonly) NSMutableDictionary* trackedBeacons;
 
 @end

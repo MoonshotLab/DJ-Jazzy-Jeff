@@ -9,7 +9,7 @@
 #import "BogusBeaconService.h"
 #import <CoreBluetooth/CoreBluetooth.h>
 
-static BOOL DEBUG = NO;
+static BOOL DEBUG = YES;
 
 
 @interface BogusBeaconService() <CBCentralManagerDelegate>
@@ -24,6 +24,7 @@ static BOOL DEBUG = NO;
 
 
 - (id)init:(NSString *)channel {
+    _trackedBeacons = [[NSMutableDictionary alloc] init];
     _channel = [CBUUID UUIDWithString:channel];
     return self;
 }
@@ -35,14 +36,15 @@ static BOOL DEBUG = NO;
     if(!manager){
         manager = [[CBCentralManager alloc] initWithDelegate:self queue:nil];
         timer = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(heartBeat) userInfo:nil repeats:YES];
-        NSLog(@"manager created");
+        if(DEBUG)
+            NSLog(@"manager created");
     }
 }
 
 
 - (void) stopDetecting{
     manager = nil;
-    *_isDetecting = NO;
+    _isDetecting = NO;
     
     [timer invalidate];
 }
@@ -92,11 +94,22 @@ static BOOL DEBUG = NO;
 - (void) centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary *)advertisementData RSSI:(NSNumber *)RSSI{
     MSDetectorRange proximity = [self convertRSSItoINProximity:[RSSI floatValue]];
     NSString *proximityString = [self getProximityString:proximity];
-
+    
     CBUUID *uuid = [advertisementData[CBAdvertisementDataServiceUUIDsKey] firstObject];
-
-    if (DEBUG)
-        NSLog(@"Beacon %@ || Proximity %@ || Distance %@", uuid, proximityString, RSSI);
+    
+    if(uuid){
+        NSString *key = uuid.UUIDString;
+        NSMutableDictionary *beacon = [_trackedBeacons objectForKey:key];
+        
+        if(DEBUG)
+            NSLog(@"Tracking || %@ || %@ || %@", key, proximityString, RSSI);
+        
+        if(!beacon){
+            NSMutableDictionary *beacon = [NSMutableDictionary new];
+            [beacon setObject:[NSNumber numberWithInt:proximity] forKey:@"lastProximity"];
+            [_trackedBeacons setObject:beacon forKey:key];
+        }
+    }
 }
 
 

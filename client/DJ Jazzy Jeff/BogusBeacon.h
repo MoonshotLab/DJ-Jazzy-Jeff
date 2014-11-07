@@ -16,8 +16,8 @@
 - (void) stopBroadcasting;
 
 @property(readonly) CBUUID* channel;
-@property(readonly) NSString* username;
-@property(readonly) BOOL* isBroadcasting;
+@property(readonly) CBUUID* username;
+@property(readonly) BOOL isBroadcasting;
 @property(readonly) NSDictionary* advertisingData;
 
 @end
