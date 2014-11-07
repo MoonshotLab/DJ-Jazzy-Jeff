@@ -10,7 +10,7 @@
 #import <UIKit/UIKit.h>
 #import <CoreBluetooth/CoreBluetooth.h>
 
-static BOOL DEBUG = YES;
+static BOOL DEBUG = NO;
 
 
 @interface BogusBeacon() <CBPeripheralManagerDelegate>

@@ -16,12 +16,6 @@
 		DE34E7CB1A07F2790093F203 /* DJ_Jazzy_JeffTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DE34E7CA1A07F2790093F203 /* DJ_Jazzy_JeffTests.m */; };
 		DE34E7D51A07F30D0093F203 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE34E7D41A07F30D0093F203 /* CoreBluetooth.framework */; };
 		DE34E7D71A07F3160093F203 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE34E7D61A07F3160093F203 /* CoreLocation.framework */; };
-		DE34E7DB1A07F3A70093F203 /* INBeaconService.m in Sources */ = {isa = PBXBuildFile; fileRef = DE34E7DA1A07F3A70093F203 /* INBeaconService.m */; };
-		DE34E7EB1A07FAD10093F203 /* CBCentralManager+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = DE34E7DF1A07FAD10093F203 /* CBCentralManager+Ext.m */; };
-		DE34E7EC1A07FAD10093F203 /* CBPeripheralManager+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = DE34E7E11A07FAD10093F203 /* CBPeripheralManager+Ext.m */; };
-		DE34E7ED1A07FAD10093F203 /* CBUUID+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = DE34E7E31A07FAD10093F203 /* CBUUID+Ext.m */; };
-		DE34E7EE1A07FAD10093F203 /* CLBeacon+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = DE34E7E51A07FAD10093F203 /* CLBeacon+Ext.m */; };
-		DE34E7F01A07FAD10093F203 /* EasedValue.m in Sources */ = {isa = PBXBuildFile; fileRef = DE34E7E91A07FAD10093F203 /* EasedValue.m */; };
 		DE34E8131A07FBA40093F203 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE34E8121A07FBA40093F203 /* UIKit.framework */; };
 		DE34E8151A07FBCB0093F203 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE34E8141A07FBCB0093F203 /* Foundation.framework */; };
 		DE34E8171A07FBFE0093F203 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE34E8161A07FBFE0093F203 /* CoreGraphics.framework */; };
@@ -56,19 +50,6 @@
 		DE34E7CA1A07F2790093F203 /* DJ_Jazzy_JeffTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DJ_Jazzy_JeffTests.m; sourceTree = "<group>"; };
 		DE34E7D41A07F30D0093F203 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		DE34E7D61A07F3160093F203 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		DE34E7D91A07F3A70093F203 /* INBeaconService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INBeaconService.h; sourceTree = "<group>"; };
-		DE34E7DA1A07F3A70093F203 /* INBeaconService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INBeaconService.m; sourceTree = "<group>"; };
-		DE34E7DE1A07FAD10093F203 /* CBCentralManager+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CBCentralManager+Ext.h"; sourceTree = "<group>"; };
-		DE34E7DF1A07FAD10093F203 /* CBCentralManager+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CBCentralManager+Ext.m"; sourceTree = "<group>"; };
-		DE34E7E01A07FAD10093F203 /* CBPeripheralManager+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CBPeripheralManager+Ext.h"; sourceTree = "<group>"; };
-		DE34E7E11A07FAD10093F203 /* CBPeripheralManager+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CBPeripheralManager+Ext.m"; sourceTree = "<group>"; };
-		DE34E7E21A07FAD10093F203 /* CBUUID+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CBUUID+Ext.h"; sourceTree = "<group>"; };
-		DE34E7E31A07FAD10093F203 /* CBUUID+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CBUUID+Ext.m"; sourceTree = "<group>"; };
-		DE34E7E41A07FAD10093F203 /* CLBeacon+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLBeacon+Ext.h"; sourceTree = "<group>"; };
-		DE34E7E51A07FAD10093F203 /* CLBeacon+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLBeacon+Ext.m"; sourceTree = "<group>"; };
-		DE34E7E81A07FAD10093F203 /* EasedValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasedValue.h; sourceTree = "<group>"; };
-		DE34E7E91A07FAD10093F203 /* EasedValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasedValue.m; sourceTree = "<group>"; };
-		DE34E7EA1A07FAD10093F203 /* GCDSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDSingleton.h; sourceTree = "<group>"; };
 		DE34E8121A07FBA40093F203 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DE34E8141A07FBCB0093F203 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DE34E8161A07FBFE0093F203 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -136,7 +117,6 @@
 		DE34E7AD1A07F2790093F203 /* DJ Jazzy Jeff */ = {
 			isa = PBXGroup;
 			children = (
-				DE34E7DD1A07FA2D0093F203 /* Extension */,
 				DE34E7D81A07F3920093F203 /* System */,
 				DE34E7B21A07F2790093F203 /* AppDelegate.h */,
 				DE34E7B31A07F2790093F203 /* AppDelegate.m */,
@@ -179,32 +159,12 @@
 		DE34E7D81A07F3920093F203 /* System */ = {
 			isa = PBXGroup;
 			children = (
-				DE34E7D91A07F3A70093F203 /* INBeaconService.h */,
-				DE34E7DA1A07F3A70093F203 /* INBeaconService.m */,
 				DEE8C84E1A0BE5ED0012127E /* BogusBeacon.h */,
 				DEE8C84F1A0BE5ED0012127E /* BogusBeacon.m */,
 				DEE8C8511A0BF4BC0012127E /* BogusBeaconService.h */,
 				DEE8C8521A0BF4BC0012127E /* BogusBeaconService.m */,
 			);
 			name = System;
-			sourceTree = "<group>";
-		};
-		DE34E7DD1A07FA2D0093F203 /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				DE34E7DE1A07FAD10093F203 /* CBCentralManager+Ext.h */,
-				DE34E7DF1A07FAD10093F203 /* CBCentralManager+Ext.m */,
-				DE34E7E01A07FAD10093F203 /* CBPeripheralManager+Ext.h */,
-				DE34E7E11A07FAD10093F203 /* CBPeripheralManager+Ext.m */,
-				DE34E7E21A07FAD10093F203 /* CBUUID+Ext.h */,
-				DE34E7E31A07FAD10093F203 /* CBUUID+Ext.m */,
-				DE34E7E41A07FAD10093F203 /* CLBeacon+Ext.h */,
-				DE34E7E51A07FAD10093F203 /* CLBeacon+Ext.m */,
-				DE34E7E81A07FAD10093F203 /* EasedValue.h */,
-				DE34E7E91A07FAD10093F203 /* EasedValue.m */,
-				DE34E7EA1A07FAD10093F203 /* GCDSingleton.h */,
-			);
-			name = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,13 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE34E7F01A07FAD10093F203 /* EasedValue.m in Sources */,
-				DE34E7DB1A07F3A70093F203 /* INBeaconService.m in Sources */,
 				DEE8C8501A0BE5ED0012127E /* BogusBeacon.m in Sources */,
-				DE34E7EB1A07FAD10093F203 /* CBCentralManager+Ext.m in Sources */,
-				DE34E7EC1A07FAD10093F203 /* CBPeripheralManager+Ext.m in Sources */,
-				DE34E7ED1A07FAD10093F203 /* CBUUID+Ext.m in Sources */,
-				DE34E7EE1A07FAD10093F203 /* CLBeacon+Ext.m in Sources */,
 				DE34E7B71A07F2790093F203 /* ViewController.m in Sources */,
 				DEE8C8531A0BF4BC0012127E /* BogusBeaconService.m in Sources */,
 				DE34E7B41A07F2790093F203 /* AppDelegate.m in Sources */,

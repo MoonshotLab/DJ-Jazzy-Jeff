@@ -9,13 +9,14 @@
 #import <CoreGraphics/CoreGraphics.h>
 #import <Foundation/Foundation.h>
 #import "ViewController.h"
-#import "INBeaconService.h"
 #import "BogusBeacon.h"
+#import "BogusBeaconService.h"
 
 static NSString *WEB_SERVICE_URL = @"https://infinite-waters-6799.herokuapp.com";
 //static NSString *WEB_SERVICE_URL = @"http://localhost:3000";
 
-@interface ViewController () <INBeaconServiceDelegate, UIPickerViewDataSource, UIPickerViewDelegate>
+@interface ViewController () <UIPickerViewDataSource, UIPickerViewDelegate>
+- (IBAction)saveButton:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *userNameView;
 @property (weak, nonatomic) IBOutlet UIPickerView *songSelector;
 @property (weak, nonatomic) IBOutlet UIButton *saveButton;
@@ -30,7 +31,7 @@ static NSString *WEB_SERVICE_URL = @"https://infinite-waters-6799.herokuapp.com"
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self fetchSongs];
+//    [self fetchSongs];
 
     NSUserDefaults *userData = [NSUserDefaults standardUserDefaults];
     NSString *storedUserName = [userData objectForKey:@"userName"];
@@ -50,8 +51,8 @@ static NSString *WEB_SERVICE_URL = @"https://infinite-waters-6799.herokuapp.com"
         BogusBeacon *beacon = [[BogusBeacon alloc] init:@"CB284D88-5317-4FB4-9621-C5A3A49E6155" : _userName];
         [beacon startBroadcasting];
     } else {
-        [[INBeaconService singleton] addDelegate:self];
-        [[INBeaconService singleton] startDetecting];
+        BogusBeaconService *beaconService = [[BogusBeaconService alloc] init:@"CB284D88-5317-4FB4-9621-C5A3A49E6155"];
+        [beaconService startDetecting];
 
         _songSelector.hidden = YES;
         _saveButton.hidden = YES;
@@ -101,27 +102,6 @@ static NSString *WEB_SERVICE_URL = @"https://infinite-waters-6799.herokuapp.com"
 
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:userMessage message:@"" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
     [alert show];
-}
-
-- (void)service:(INBeaconService *)service foundDeviceUUID:(NSString *)uuid withRange:(INDetectorRange)range
-{
-    NSString *rangeString;
-    switch (range) {
-        case INDetectorRangeFar:
-            rangeString = @"far";
-            break;
-        case INDetectorRangeNear:
-            rangeString = @"near";
-            break;
-        case INDetectorRangeImmediate:
-            rangeString = @"near";
-            break;
-        default:
-            rangeString = @"?";
-            break;
-    }
-    
-    NSLog(@"UUID: %@, Range: %@", uuid, rangeString);
 }
 
 - (void) showUserName {
