@@ -34,7 +34,7 @@ static BOOL DEBUG = NO;
 
     if(!manager){
         manager = [[CBCentralManager alloc] initWithDelegate:self queue:nil];
-        timer = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(reportUpdates) userInfo:nil repeats:YES];
+        timer = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(heartBeat) userInfo:nil repeats:YES];
         NSLog(@"manager created");
     }
 }
@@ -48,7 +48,7 @@ static BOOL DEBUG = NO;
 }
 
 
-- (void) reportUpdates{}
+- (void) heartBeat{}
 
 
 - (MSDetectorRange)convertRSSItoINProximity:(float)proximity
@@ -96,7 +96,7 @@ static BOOL DEBUG = NO;
     CBUUID *uuid = [advertisementData[CBAdvertisementDataServiceUUIDsKey] firstObject];
 
     if (DEBUG)
-        NSLog(@"Beacon %@ at Proximity %@ Distance %@", uuid, proximityString, RSSI);
+        NSLog(@"Beacon %@ || Proximity %@ || Distance %@", uuid, proximityString, RSSI);
 }
 
 

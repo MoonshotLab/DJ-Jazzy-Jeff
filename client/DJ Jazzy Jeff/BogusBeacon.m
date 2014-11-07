@@ -48,44 +48,15 @@ static BOOL DEBUG = NO;
         enabled = NO;
 
     if(DEBUG && !(enabled))
-        NSLog(@"bluetooth not authorized");
+        NSLog(@"bluetooth not authorized or does not exist");
     
     return enabled;
 }
 
 
 - (void)startBroadcasting{
-    if([self canBroadcast] && !peripheralManager){
+    if([self canBroadcast] && !peripheralManager)
         peripheralManager = [[CBPeripheralManager alloc] initWithDelegate:self queue:nil];
-        [peripheralManager startAdvertising:_advertisingData];
-        
-        NSString *log;
-        switch (peripheralManager.state) {
-            case CBPeripheralManagerStatePoweredOff:
-                log = @"off";
-                break;
-            case CBPeripheralManagerStatePoweredOn:
-                log = @"on";
-                break;
-            case CBPeripheralManagerStateResetting:
-                log = @"resetting";
-                break;
-            case CBPeripheralManagerStateUnauthorized:
-                log = @"unauthed";
-                break;
-            case CBPeripheralManagerStateUnknown:
-                log = @"unknown";
-                break;
-            case CBPeripheralManagerStateUnsupported:
-                log = @"unsupported";
-                break;
-            default:
-                log = @"something else";
-                break;
-        }
-
-        NSLog(@"%@", log);
-    }
 }
 
 
@@ -97,14 +68,12 @@ static BOOL DEBUG = NO;
 
 
 -(void)peripheralManagerDidStartAdvertising:(CBPeripheralManager *)peripheral error:(NSError *)error{
-    NSLog(@"has begun advertising");
+    if (DEBUG)
+        NSLog(@"advertising peripheral...");
 }
 
 
 - (void)peripheralManagerDidUpdateState:(CBPeripheralManager *)peripheral{
-    if(DEBUG)
-        NSLog(@"State changed: %ld", peripheral.state);
-    
     if(peripheral.state == CBPeripheralManagerStatePoweredOn){
         [peripheralManager startAdvertising:_advertisingData];
         _isBroadcasting = YES;
