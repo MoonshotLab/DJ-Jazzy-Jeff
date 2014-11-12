@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BogusBeacon.h"
+#import "BogusBeaconService.h"
 
 @interface ViewController : UIViewController
+@property BogusBeacon* beacon;
+@property BogusBeaconService* beaconService;
 @end
 

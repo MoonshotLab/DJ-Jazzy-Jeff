@@ -19,7 +19,6 @@ static BOOL DEBUG = YES;
 @implementation BogusBeaconService
 {
     CBCentralManager *manager;
-    NSTimer *timer;
 }
 
 
@@ -35,7 +34,6 @@ static BOOL DEBUG = YES;
 
     if(!manager){
         manager = [[CBCentralManager alloc] initWithDelegate:self queue:nil];
-        timer = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(heartBeat) userInfo:nil repeats:YES];
         if(DEBUG)
             NSLog(@"manager created");
     }
@@ -45,8 +43,6 @@ static BOOL DEBUG = YES;
 - (void) stopDetecting{
     manager = nil;
     _isDetecting = NO;
-    
-    [timer invalidate];
 }
 
 

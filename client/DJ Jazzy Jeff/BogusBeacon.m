@@ -27,13 +27,9 @@ static BOOL DEBUG = YES;
     _channel  = [CBUUID UUIDWithString:channel];
     _username = [CBUUID UUIDWithString:username];
     _advertisingData = @{CBAdvertisementDataServiceUUIDsKey:@[_username, _channel]};
-    
-    [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(heartBeat) userInfo:nil repeats:YES];
 
     return self;
 }
-
-- (void) heartBeat{}
 
 
 - (BOOL)canBroadcast{

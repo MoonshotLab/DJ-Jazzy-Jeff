@@ -31,32 +31,32 @@ static NSString *WEB_SERVICE_URL = @"https://infinite-waters-6799.herokuapp.com"
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    [self fetchSongs];
+    [self fetchSongs];
 
     NSUserDefaults *userData = [NSUserDefaults standardUserDefaults];
     NSString *storedUserName = [userData objectForKey:@"userName"];
 
     if(![storedUserName length]){
-        _userName = [[NSUUID UUID] UUIDString];
-        [userData setValue:_userName forKey:@"userName"];
+        self.userName = [[NSUUID UUID] UUIDString];
+        [userData setValue:self.userName forKey:@"userName"];
         [userData synchronize];
-        [self registerUser:_userName];
+        [self registerUser:self.userName];
     } else {
-        _userName = storedUserName;
+        self.userName = storedUserName;
         [self showUserName];
     }
     
     UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
     if (orientation == UIDeviceOrientationPortrait){
-        BogusBeacon *beacon = [[BogusBeacon alloc] init:@"CB284D88-5317-4FB4-9621-C5A3A49E6155" : _userName];
-        [beacon startBroadcasting];
+        self.beacon = [[BogusBeacon alloc] init:@"CB284D88-5317-4FB4-9621-C5A3A49E6155" : self.userName];
+        [self.beacon startBroadcasting];
     } else {
-        BogusBeaconService *beaconService = [[BogusBeaconService alloc] init:@"CB284D88-5317-4FB4-9621-C5A3A49E6155"];
-        [beaconService startDetecting];
+        self.beaconService = [[BogusBeaconService alloc] init:@"CB284D88-5317-4FB4-9621-C5A3A49E6155"];
+        [self.beaconService startDetecting];
 
-        _songSelector.hidden = YES;
-        _saveButton.hidden = YES;
-        _background.contentMode = UIViewContentModeScaleAspectFill;
+        self.songSelector.hidden = YES;
+        self.saveButton.hidden = YES;
+        self.background.contentMode = UIViewContentModeScaleAspectFill;
     }
 }
 
@@ -65,21 +65,21 @@ static NSString *WEB_SERVICE_URL = @"https://infinite-waters-6799.herokuapp.com"
 }
 
 - (void) pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
-    NSArray *songIds = [_songs objectForKey:@"ids"];
-    _selectedSongId = songIds[row];
+    NSArray *songIds = [self.songs objectForKey:@"ids"];
+    self.selectedSongId = songIds[row];
 }
 
 - (NSInteger) pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
-    return [[_songs objectForKey:@"ids"] count];
+    return [[self.songs objectForKey:@"ids"] count];
 }
 
 - (NSString *) pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
-    NSArray *songNames = [_songs objectForKey:@"names"];
+    NSArray *songNames = [self.songs objectForKey:@"names"];
     return songNames[row];
 }
 
 - (IBAction)saveButton:(id)sender {
-    NSString *postString = [NSString stringWithFormat:@"username=%@&songId=%@", _userName, _selectedSongId];
+    NSString *postString = [NSString stringWithFormat:@"username=%@&songId=%@", self.userName, self.selectedSongId];
     NSData *postData = [postString dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
     NSString *postLength = [NSString stringWithFormat:@"%lu", (unsigned long)[postData length]];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
@@ -107,8 +107,8 @@ static NSString *WEB_SERVICE_URL = @"https://infinite-waters-6799.herokuapp.com"
 - (void) showUserName {
     NSMutableString *userNameText = [NSMutableString string];
     [userNameText appendString:@"username: "];
-    [userNameText appendString:_userName];
-    _userNameView.text = userNameText;
+    [userNameText appendString:self.userName];
+    self.userNameView.text = userNameText;
 }
 
 - (void)registerUser:(NSString *)userName {
@@ -140,15 +140,15 @@ static NSString *WEB_SERVICE_URL = @"https://infinite-waters-6799.herokuapp.com"
 
     NSMutableArray *songNames = [[NSMutableArray alloc] initWithCapacity:jsonArray.count];
     NSMutableArray *songIds = [[NSMutableArray alloc] initWithCapacity:jsonArray.count];
-    _songs = [[NSMutableDictionary alloc] initWithCapacity:jsonArray.count];
+    self.songs = [[NSMutableDictionary alloc] initWithCapacity:jsonArray.count];
     
     for(NSDictionary *item in jsonArray) {
         [songNames addObject: [item objectForKey:@"title"]];
         [songIds addObject: [item objectForKey:@"id"]];
     }
     
-    [_songs setObject:songNames forKey:@"names"];
-    [_songs setObject:songIds forKey:@"ids"];
+    [self.songs setObject:songNames forKey:@"names"];
+    [self.songs setObject:songIds forKey:@"ids"];
 }
 
 @end
